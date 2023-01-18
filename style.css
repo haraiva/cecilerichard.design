@@ -222,5 +222,19 @@ button:active {
 	input, textarea {
 		border-radius: 4px;
 	}
+
+	#name {
+		font-size: 1.6em;
+	}
+
+	#subtitle {
+		color: var(--colSecondary);
+		font-weight: 200;
+		font-size: 0.6em;
+	}
+
+	header img {
+		margin-right: 1.2em;
+	}
 }
 
