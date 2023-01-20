@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-	<!--'adventureboundauto.au' site created by Andrew Gleeson (gleeson.dev) -->
+	<!-- welcome to my twisted mind etc -->
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,51 +24,74 @@
 
 </head>
 <body>
-	<header>
-		<img src="./img/Emblem_White_100px.png">
-		<div><h1 id="name">cecile richard</h1>
-		<p id="subtitle">design ✷ illustration ✷ games</p></div>
-	</header>
 	<main>
-		<div id="intro"><h2>hi! i'm cecile and i'm a graphic designer, zine maker, and game designer living in melbourne.</h2>
-		<h2>/!\ i'm building a new website at the moment. /!\</h2>
-		<h2>you can follow me on <a href="https://twitter.com/haraiva" target="_blank">twitter</a>, <a href="https://instagram.com/cecilerichard.design" target="_blank">instagram</a> and check out my games on <a href="https://haraiva.itch.io" target="_blank">itch.io</a>.</h2>
-		<br><hr><br>
-		<h2>you can still contact me by sending an email to<br>
-		hey.cecilerichard ✷ at ✷ gmail.com<br>
-		or complete the form below ↓</h2></div>
+		<header>
+			<div class="logo">
+				<img src="./img/Emblem_White_100px.png">
+				<div class="logotype">
+					<h1 class="name">cecile&nbsp;richard</h1>
+					<p class="subtitle">design&nbsp;✷&nbsp;illustration&nbsp;✷&nbsp;games</p>
+				</div>
+			</div>
+<!-- 			<div class="menu"></div> -->
+		</header>
+		<div class="submenu">
+			<div class="news">
+				<i class="fa-solid fa-crow"></i>
+				<p>(</p>
+				<marquee direction="left"><p>i'm building a new website!</p></marquee>
+			</div>
+		</div>
+		<div class="content">
+			<div class="text-box">
+				<h2>hi! i'm cecile and i'm a graphic designer, zine maker, and game designer.</h2>
+				<h2>/!\ i'm building a new website at the moment. /!\</h2>
+				<h2>you can follow me on <a href="https://twitter.com/haraiva" target="_blank">twitter</a>, <a href="https://instagram.com/cecilerichard.design" target="_blank">instagram</a> and check out my games on <a href="https://haraiva.itch.io" target="_blank">itch.io</a>.</h2>
+			</div>
+			<hr>
+			<div class="text-box">
+				<h2>you can still contact me by sending an email to hey.cecilerichard✷at✷gmail.com<br>or complete the form below ↓</h2>
+			</div>
+			<form  action="https://formsubmit.co/26be23b3556f28c35288d08c460a59ce" method="POST" target="_blank">
+				<h2>get in touch</h2>
+				  <label>
+				    <span><i class="fa-solid fa-user"></i></span>
+				    <input name="name" placeholder="name" required>
+				  </label>
+				  <label>
+				    <span><i class="fa-solid fa-at"></i></span>
+				    <input type="email" name="email" placeholder="email" required>
+				  </label>
+				  <label>
+				    <span><i class="fa-solid fa-quote-right"></i></span>
+				    <input type="subject" name="_subject" placeholder="subject" required>
+				  </label>
+				  <label>
+				    <span><i class="fa-solid fa-message"></i></span>
+				    <textarea name="message" placeholder="message" rows="4" required></textarea>
+				  </label>
+				  <!-- Settings -->
+				  <!-- <input type="hidden" name="_next" value="http://localhost:8080/thanks.html"> -->
+				  <input type="hidden" name="_template" value="table">
 
-		<form  action="https://formsubmit.co/26be23b3556f28c35288d08c460a59ce" method="POST" target="_blank">
+				  <button type="submit">send ↗</button>
+			</form>
 
-		<h3>get in touch</h3>
-		  <label>
-		    <span><i class="fa-solid fa-user"></i></span>
-		    <input name="name" placeholder="name" required>
-		  </label>
-		  <label>
-		    <span><i class="fa-solid fa-at"></i></span>
-		    <input type="email" name="email" placeholder="email" required>
-		  </label>
-		  <label>
-		    <span><i class="fa-solid fa-quote-right"></i></span>
-		    <input type="subject" name="_subject" placeholder="subject" required>
-		  </label>
-		  <label>
-		    <span><i class="fa-solid fa-message"></i></span>
-		    <textarea name="message" placeholder="your message" rows="4" required></textarea>
-		  </label>
-
-		  <!-- Settings -->
-		  <!-- <input type="hidden" name="_next" value="http://localhost:8080/thanks.html"> -->
-		  <input type="hidden" name="_template" value="table">
-
-		  <button type="submit">send</button>
-		</form>
-		<h1>✷</h1>
-		<footer>
-			<script>document.getElementById('year').innerHTML = new Date().getFullYear();</script>
-			<p>&copy; cecile richard <span id="year">2023</span></p>
-		</footer>
+		</div>
 	</main>
+	<footer>
+		<!-- <div class="footer-flex"> -->
+			<div>
+				<script>document.getElementById('year').innerHTML = new Date().getFullYear();</script>
+				<p>&copy; cecile richard <span id="year">2023</span></p>
+			</div>
+			<div style="text-align:center;">
+				<p>✷</p>
+			</div>
+			<div style="text-align:right;">
+				<i class="fa-solid fa-crow"></i></i>
+			</div>
+		<!-- </div> -->
+	</footer>
 </body>
 </html>
