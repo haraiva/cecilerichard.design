@@ -134,7 +134,6 @@ hr {
 	height: 48px;
 	max-width: 90%;
 	margin-bottom: 24px;
-
 }
 
 marquee {
@@ -245,7 +244,7 @@ footer div {
 }
 
 .news {
-/*	display: none;*/
+	display: none;
 	max-width: 100%;
 }
 
