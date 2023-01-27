@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- hello :) -->
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>cecile richard / design ✷ illustration ✷ games</title>
+
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="./scripts/main.js"></script>
+
+	<link href="https://api.fontshare.com/v2/css?f[]=azeret-mono@2,1&f[]=epilogue@2,1&display=swap" rel="stylesheet"> 
+
+	<meta property="og:title" content="Cecile Richard"/>
+	<meta name="description" content="design ✷ illustration ✷ games.">
+	<meta property="og:description" content="design ✷ illustration ✷ games."/>
+	<meta property="og:image" content="./img/social-card.png"/>
+	<meta property="og:url" content="https://cecilerichard.design"/>
+	<meta name="twitter:card" content="summary_large_image"/>
+
+	<script src="https://kit.fontawesome.com/87224a5bfc.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<main>
+		<header>
+			<a href="./index.html" class="logo">
+				<img id="emblem" src="./img/Emblem_White_100px.png">
+				<div class="logotype">
+					<h1 class="name">cecile&nbsp;richard</h1>
+					<p class="subtitle">design&nbsp;✷&nbsp;illustration&nbsp;✷&nbsp;games</p>
+				</div>
+			</a>
+		<div class="menu">
+<!-- 			<h3>works<br>
+				-- design<br>
+				-- illustration<br>
+				-- games<br>
+				-- zines<br>
+			</h3> -->
+			<h3><a href="./info.html">info + cv</a><br>
+				<a class="current" href="./contact.html">contact</a><br></h3>
+			<h3><a href="./index.html">index</a></h3>
+		</div>
+		</header>
+		<div class="subnav">
+			<div class="news">
+				<i class="fa-solid fa-crow"></i>
+				<p>(</p>
+				<marquee direction="left"><p>i'm building a new website!</p></marquee>
+			</div>
+		</div>
+		<div class="content">
+			<div class="text-box">
+				<h4>links ↓</h4>
+				<h2>you can find me on <a href="https://twitter.com/haraiva" target="_blank">twitter</a>, <a href="https://instagram.com/cecilerichard.design" target="_blank">instagram</a> and check out my games on <a href="https://haraiva.itch.io" target="_blank">itch.io</a>.</h2>
+			</div>
+			<hr>
+			<div class="text-box">
+				<h4>contact ↓</h4>
+				<h2>for any work-related inquiries, contact me by sending an email to hey.cecilerichard✷at✷gmail.com<br>or complete the form below ↓</h2>
+			</div>
+			<form id="form" onsubmit="thankyouMessage()" action="https://formsubmit.co/26be23b3556f28c35288d08c460a59ce" method="POST" target="_blank">
+				<h2>get in touch</h2>
+				  <label>
+				    <span><i class="fa-solid fa-user"></i></span>
+				    <input name="name" placeholder="name" required>
+				  </label>
+				  <label>
+				    <span><i class="fa-solid fa-at"></i></span>
+				    <input type="email" name="email" placeholder="email" required>
+				  </label>
+				  <label>
+				    <span><i class="fa-solid fa-quote-right"></i></span>
+				    <input type="subject" name="_subject" placeholder="subject" required>
+				  </label>
+				  <label>
+				    <span><i class="fa-solid fa-message"></i></span>
+				    <textarea name="message" placeholder="message" rows="4" required></textarea>
+				  </label>
+				  <!-- Settings -->
+				  <!-- <input type="hidden" name="_next" value="http://localhost:8080/thanks.html"> -->
+				  <input type="hidden" name="_template" value="table">
+
+				  <button type="submit">send ↗</button>
+			</form>
+			</div>
+		</div>
+	</main>
+	<footer>
+			<div>
+				<p>&copy; cecile richard <span id="year">2023</span></p>
+				<script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+			</div>
+			<div style="text-align:center;">
+				<p>✷</p>
+			</div>
+			<div style="text-align:right;">
+				<i onclick="toggleTheme(this)" class="fa-solid fa-crow"></i>
+			</div>
+		<!-- </div> -->
+	</footer>
+</body>
+</html>
