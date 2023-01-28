@@ -306,9 +306,11 @@ button:active {
 
 
 @media (max-width: 1000px) {
+
 	.content, .subnav, header{
 	flex-basis: content;
 }
+
 }
 
 
