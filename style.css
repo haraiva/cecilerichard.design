@@ -46,6 +46,19 @@ header {
 	flex-basis: 25%;
 }
 
+:disabled {
+    background: #222;
+    color: #444;
+}
+
+button:disabled {
+  cursor: auto;
+}
+
+.formResponse {
+  color: yellow;
+  /* whatever */
+}
 
 footer {
 	position: relative;

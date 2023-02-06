@@ -24,6 +24,24 @@ document.getElementById("news_message").innerHTML = "hello!";
 }
 
 
-function thankyouMessage() {
-   document.getElementById("form").innerHTML = "Thank you!"
+function thankyou() {
+    // Disable Form
+    inputs = contactForm.querySelectorAll('input, select, textarea, button');
+    for (i of inputs) {
+        i.disabled = true;
+    }
+    // Hide Button - you can do this instead!
+    buttons = contactForm.querySelectorAll('button');
+    for (b of buttons) {
+        b.hidden = true;
+    }
+    
+    // Append a ThankYou Message - with a class you can style.
+    const response = document.createElement('p');
+    response.classList.add('formResponse');
+    response.innerText = "Thank you!";
+    contactForm.appendChild(response);
 }
+
+contactForm = document.getElementById('contactform');
+contactForm.addEventListener('submit', thankyou);
