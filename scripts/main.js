@@ -28,7 +28,7 @@ function thankyou() {
     // Disable Form
     inputs = contactForm.querySelectorAll('input, select, textarea, button');
     for (i of inputs) {
-        i.disabled = true;
+        i.readOnly = true;
     }
     // Hide Button - you can do this instead!
     buttons = contactForm.querySelectorAll('button');
