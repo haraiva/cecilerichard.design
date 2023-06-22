@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+	<title>{{ title }} / {{site.title}}</title>
+
+	<!-- Meta -->
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="{{ '/css/style.css' | url }}">
+	<!-- FontShare -->
+	<link href="https://api.fontshare.com/v2/css?f[]=azeret-mono@2,1&amp;f[]=epilogue@2,1&amp;display=swap" rel="stylesheet">
+
+	<!-- FontAwesome -->
+	<script src="https://kit.fontawesome.com/87224a5bfc.js" crossorigin="anonymous"></script>
+	<script src="/js/script.js"></script>
+	<style>
+	{% block style %}
+
+	{% endblock %}
+	</style>
+</head>
+<body>
+	<header>
+		<div id="mainlogo">
+			<a href="/" class="logo">
+				<img id="emblem" src="/img/Emblem_White_100px.png">
+				<div class="logotype">
+					<h1 class="name">cecile&nbsp;richard</h1>
+					<p class="subtitle">design&nbsp;✷&nbsp;illustration&nbsp;✷&nbsp;games</p>
+				</div>
+			</a>
+		</div>
+		<div id="news">
+			<i class="fa-solid fa-crow"></i>
+			<div id="newsBubble">
+				Hello.
+			</div>
+		</div>
+		<button id="lightmode">
+			<i id="lighticon" class="fa-solid fa-sun"></i>
+		</button>
+	</header>
+
+	<div id="view">
+		<nav id="mainNav">
+			{% for entry in collections.all | eleventyNavigation %}
+			<div class="nav-item">
+				<a id="{{ entry.url | slugify }}" href="{{ entry.url | url }}">{{ entry.title }}</a>
+			</div>
+
+			{% if loop.index % 4 == 0 or loop.index % 7 == 0 %}
+				<br>
+			{% endif %}
+
+			{% endfor %}
+		</nav>
+		<nav id="subNav">
+			{% block subnav %}
+
+			{% endblock %}
+		</nav>
+		<main>
+			{% block content %}
+			{{ content | safe }}
+			{% endblock %}
+		</main>
+	</div>
+
+	<footer>
+		<span>
+		&copy; cecile richard <span id="year">2023</span><script>document.getElementById("year").innerText = new Date().getFullYear();</script>
+		</span>
+	</footer>
+</body>
+</html>

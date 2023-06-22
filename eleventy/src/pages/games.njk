@@ -1,0 +1,21 @@
+---
+title: GAMES
+permalink: /games/
+eleventyNavigation:
+  key: games
+  order: 3
+---
+
+{% extends "projectpage.njk" %}
+
+{% block subnav %}
+  <h2>games</h2>
+  {% for project in collections.games %}
+  <div class="nav-item" id="{{ project.data.title | slugify }}"><a href="{{ project.url }}">{{ project.data.title }}</a></div>
+  {% endfor %}
+{% endblock %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<p>Select a project from the subnav menu.</p>
+{% endblock %}

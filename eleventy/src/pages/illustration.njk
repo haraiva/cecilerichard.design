@@ -1,0 +1,21 @@
+---
+title: ILLUSTRATION
+permalink: /illustration/
+eleventyNavigation:
+  key: illustration
+  order: 2
+---
+
+{% extends "projectpage.njk" %}
+
+{% block subnav %}
+  <h2>illustration</h2>
+  {% for project in collections.illustration %}
+  <div class="nav-item" id="{{ project.data.title | slugify }}"><a href="{{ project.url }}">{{ project.data.title }}</a></div>
+  {% endfor %}
+{% endblock %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<p>Select a project from the subnav menu.</p>
+{% endblock %}

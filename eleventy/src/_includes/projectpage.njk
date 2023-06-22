@@ -1,0 +1,27 @@
+{% extends "base.njk" %}
+
+{% block style %}
+	#{{ title | slugify }} {
+		background-color: yellow;
+	}
+
+	{% for tag in tags %}
+	#{{ tag | slugify }} {
+		background-color: yellow;
+	}
+	{% endfor %}
+{% endblock %}
+
+{% block subnav %}{% endblock %}
+
+{% block content %}
+	<h4>{{ title }}</h4>
+
+	{{ content | safe }}
+	
+	<div id="tagrow">
+	{% for tag in tags %}
+		<span class="tag">{{ tag }}</span>
+	{% endfor %}
+	</div>
+{% endblock %}

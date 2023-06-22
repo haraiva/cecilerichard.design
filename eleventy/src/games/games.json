@@ -1,0 +1,7 @@
+{
+	"tags": ["projects", "games"],
+	"layout": "projectpage.njk",
+	"eleventyNavigation": {
+		"parent": "games"
+	}
+}

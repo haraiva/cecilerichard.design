@@ -1,0 +1,22 @@
+---
+title: BLOG
+permalink: /blog/
+eleventyNavigation:
+  key: blog
+  order: 7
+---
+{% extends "page.njk" %}
+
+{% block content %}
+<h1>Blog</h1>
+
+{% for post in collections.blog %}
+<a href="{{ post.url | url }}">
+  <article>
+    <h3>{{ post.data.title }}</h3>
+    <date>{{ post.date | readableDate}}</date>
+  </article>
+</a>
+{% endfor %}
+
+{% endblock %}
