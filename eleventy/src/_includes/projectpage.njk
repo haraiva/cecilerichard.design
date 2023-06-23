@@ -12,9 +12,18 @@
 	{% endfor %}
 {% endblock %}
 
-{% block subnav %}{% endblock %}
+{% block subnav %}
+	{% for post in collections[category] %}
+	<div id="navitem"><a href="{{ post.data.url }}">{{ post.data.title }}</a></div>
+	{% endfor %}
+{% endblock %}
 
 {% block content %}
+
+	<div id="crumbs">
+	<a href="/">•</a> / <a href="/{{ category }}">{{ category }}</a> / {{ title }}
+	</div>
+
 	<h4>{{ title }}</h4>
 
 	{{ content | safe }}

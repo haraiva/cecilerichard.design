@@ -34,6 +34,9 @@ module.exports = function(config) {
 	// Plugin: Eleventy Navigation
 	config.addPlugin(pluginNavigation);
 	
+	// DEV: Don't duplicate passthru folders into '/build/'
+	config.setServerPassthroughCopyBehavior("passthrough");
+
 	// Passthrough Folders
 	config.addPassthroughCopy({"src/_": "."})
 	config.addPassthroughCopy("src/img")

@@ -5,11 +5,6 @@
 	--colBG3: #9d9c9b;
 	--colFG: #faf9fd;
 
-/*	--colBG1: #fff5d1;
-	--colBG2: #3c3938;
-	--colBG3: #9d9c9b;
-	--colFG: #0c0807;*/
-
 	--colPrimary:  	orangered;
 	--colSecondary: tomato;
 	--colInput: #faf9fd;
@@ -158,7 +153,7 @@ hr {
 	color: var(--colFG);
 }
 
-.text-box{
+.text-box {
 	 max-width: var(--boxWidth);
 }
 
@@ -202,7 +197,6 @@ hr {
 	margin: 0;
 }
 
-
 .news {
 	display: flex;
 	align-items: center;
@@ -217,7 +211,6 @@ marquee {
 	padding: 0 16px;
 	height: 48px;
 }
-
 
 .menu {
 	display:flex;
@@ -238,7 +231,6 @@ marquee {
 .menu a.current, a.current:hover {
 	color: var(--colFG);
 	background-color: var(--colBG1);
-/*	font-style: italic;*/
 }
 
 /*.menu a.current:after {
@@ -249,12 +241,9 @@ marquee {
 	content: "✷ ";
 }
 
-
 .submenu {
 	margin: 56px 0;
 }
-
-
 
 /* FORM */
 form {
@@ -354,6 +343,10 @@ button:active {
 	font-size: 0.8em;
 }
 
+#lightToggle {
+	aspect-ratio: 1 / 1;
+}
+
 @media (max-width: 1000px) {
 	.content, .subnav, header {
 		flex-basis: content;
@@ -369,9 +362,10 @@ button:active {
 	}
 
 	#mainNav {
-		flex-basis: 30%;
+		flex-basis: 40%;
 		flex-grow: 0;
 		max-height: 300px;
+		order: 2;
 	}
 
 	#subNav {
@@ -381,11 +375,13 @@ button:active {
 		overflow-x: hidden;
 		overflow-y: scroll;
 		border: 0;
+		order: 3;
 	}
 
 	main {
-		border-top: 2px solid var(--colBG2);
+		border-bottom: 2px solid var(--colBG2);
 		flex-basis: 100%;
+		order: 1;
 	}
 }
 

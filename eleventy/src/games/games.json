@@ -1,5 +1,6 @@
 {
 	"tags": ["projects", "games"],
+	"category": "games",
 	"layout": "projectpage.njk",
 	"eleventyNavigation": {
 		"parent": "games"

@@ -80,7 +80,7 @@ Below is what it all ended up looking like, which may not be that much of a surp
 
 ![A3 poster](/img/fp2020/Freeplay20_Poster.png)
 
-![various banners and images for social media and the website](/img/fp2020/final_banner.jpg)
+![various banners and images for social media and the website](/img/fp2020/final_banner.png)
 
 We even made animated gifs with some of the vignettes!
 
