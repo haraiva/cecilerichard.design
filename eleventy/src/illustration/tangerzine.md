@@ -1,6 +1,6 @@
 ---
 title: Tangerzine
-tags: []
+tags: [illustration, drawings]
 eleventyNavigation:
 	key: Tangerzine
 ---

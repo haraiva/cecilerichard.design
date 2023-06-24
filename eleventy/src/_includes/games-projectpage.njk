@@ -1,12 +1,16 @@
----
-title: GAMES
-permalink: /games/
-eleventyNavigation:
-  key: games
-  order: 3
----
+{% extends "base.njk" %}
 
-{% extends "projectpage.njk" %}
+{% block style %}
+	#{{ title | slugify }} {
+		background-color: yellow;
+	}
+
+	{% for tag in tags %}
+	#{{ tag | slugify }} {
+		background-color: yellow;
+	}
+	{% endfor %}
+{% endblock %}
 
 {% block subnav %}
   <h2 class="subnav-title">games</h2>
@@ -21,6 +25,21 @@ eleventyNavigation:
 {% endblock %}
 
 {% block content %}
-<h1>{{ title }}</h1>
-<p>Select a project from the subnav menu.</p>
+
+	<div id="crumbs">
+	<a href="/">•</a> / <a href="/{{ category }}">{{ category }}</a> / {{ title }}
+	</div>
+
+	<h1>{{ title }}</h1>
+	
+	{{ content | safe }}
+	
+	<hr>
+	<h1 style="text-align: center">✷</h1>
+	
+	<div id="tagrow">
+	{% for tag in tags %}
+		<span class="tag">{{ tag }}</span>
+	{% endfor %}
+	</div>
 {% endblock %}

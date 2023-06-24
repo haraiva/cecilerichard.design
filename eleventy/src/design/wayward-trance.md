@@ -1,6 +1,6 @@
 ---
 title: Wayward Trance
-tags: [web]
+tags: ['web']
 eleventyNavigation:
 	key: Wayward Trance
 ---

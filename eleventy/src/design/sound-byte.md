@@ -1,6 +1,6 @@
 ---
 title: Sound Byte
-tags: [visual identity, poster]
+tags: ['visual identity', 'poster']
 eleventyNavigation:
 	key: Sound Byte
 ---

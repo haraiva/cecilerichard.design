@@ -1,6 +1,6 @@
 ---
 title: HYPER//ECHO
-tags: [bitsy]
+tags: ['browser']
 eleventyNavigation:
 	key: HYPER//ECHO
 ---

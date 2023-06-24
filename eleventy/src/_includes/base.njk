@@ -52,11 +52,11 @@
 	<div id="view">
 		<nav id="mainNav">
 			{% for entry in collections.all | eleventyNavigation %}
-			<div class="nav-item">
-				<a id="{{ entry.url | slugify }}" href="{{ entry.url | url }}">{{ entry.title }}</a>
+			<div id="{{ entry.title | slugify }}" class="nav-item">
+				<a href="{{ entry.url | url }}">{{ entry.title }}</a>
 			</div>
 
-			{% if loop.index % 4 == 0 or loop.index % 7 == 0 %}
+			{% if loop.index % 3 == 0 or loop.index % 7 == 0 %}
 				<br>
 			{% endif %}
 
@@ -78,6 +78,8 @@
 		<span>
 		&copy; cecile richard <span id="year">2023</span><script>document.getElementById("year").innerText = new Date().getFullYear();</script>
 		</span>
+		<span>✷</span>
+		<span>↑</span>
 	</footer>
 </body>
 </html>

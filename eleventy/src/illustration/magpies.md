@@ -1,6 +1,6 @@
 ---
 title: Magpies
-tags: []
+tags: [illustration, drawings]
 eleventyNavigation:
 	key: Magpies
 ---

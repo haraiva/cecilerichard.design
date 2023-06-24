@@ -1,7 +1,7 @@
 {
 	"tags": ["projects", "illustration"],
 	"category": "illustration",
-	"layout": "projectpage.njk",
+	"layout": "illustration-projectpage.njk",
 	"eleventyNavigation": {
 		"parent": "illustration"
 	}

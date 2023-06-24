@@ -1,6 +1,6 @@
 ---
 title: Bird Party Island
-tags: []
+tags: [illustration, 'game art']
 eleventyNavigation:
 	key: Bird Party Island
 ---

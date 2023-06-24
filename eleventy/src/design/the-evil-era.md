@@ -1,8 +1,8 @@
 ---
-title: anything meaningful
-tags: [zines]
+title: THE EVIL ERA
+tags: [design, web]
 eleventyNavigation:
-	key: anything meaningful
+	key: THE EVIL ERA
 ---
 
 ![image](/img/Emblem_White_100px.png)

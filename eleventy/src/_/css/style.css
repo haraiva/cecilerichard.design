@@ -5,16 +5,16 @@
 	--colBG3: #9d9c9b;
 	--colFG: #faf9fd;
 
-	--colPrimary:  	orangered;
-	--colSecondary: tomato;
+	--colPrimary:  	tomato;
+	--colSecondary: orangered;
 	--colInput: #faf9fd;
 	--boxWidth: 640px;
 }
 
 :root[data-theme='light'] {
 	--colBG1: #fff5d1;
-	--colBG2: #3c3938;
-	--colBG3: #9d9c9b;
+	--colBG2: #ccc4a7;
+	--colBG3: #666253;
 	--colFG: #0c0807;
 }
 
@@ -69,6 +69,22 @@ header {
 	flex-basis: max(250px, 15%);
 	position: sticky;
 	top: 0px;
+}
+
+.subnav-category {
+	text-transform: uppercase;
+}
+
+.subnav-category:before {
+	content: '↓ ';
+}
+
+.subnav-title {
+	display: none;
+}
+
+.nav-item {
+	margin-bottom: 0.2em;
 }
 
 .toc ul {
@@ -151,7 +167,8 @@ a:hover {
 }
 
 hr {
-	border: 1px solid;
+	border: 0;
+	border-top: 1px var(--colFG) solid;
 	width: 100%;
 }
 
@@ -373,6 +390,10 @@ button:active {
 /* MOBILE */
 @media (max-width: 800px) {
 
+	body{
+		font-size: 0.8em;
+	}
+
 	#lightToggle {
 		height: 32px;
 		font-size: 16px;
@@ -397,6 +418,7 @@ button:active {
 
 	#subNav {
 		flex-basis: 40%;
+		flex-grow: 1;
 		max-height: 300px;
 		overflow-x: hidden;
 		overflow-y: scroll;

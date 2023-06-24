@@ -1,6 +1,6 @@
 ---
 title: ( C Y C L E )
-tags: [html, domino]
+tags: [browser, domino]
 eleventyNavigation:
 	key: ( C Y C L E )
 ---

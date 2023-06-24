@@ -1,8 +1,8 @@
 ---
-title: Novembre
-tags: [zines, html]
+title: Oj Vilket Liv!
+tags: [illustration, zines, comics]
 eleventyNavigation:
-	key: Novembre
+	key: Oj Vilket Liv!
 ---
 
 ![image](/img/Emblem_White_100px.png)

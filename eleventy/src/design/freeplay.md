@@ -1,6 +1,6 @@
 ---
 title: Freeplay/Parallels
-tags: [visual identity, poster]
+tags: ['visual identity', 'poster']
 eleventyNavigation:
 	key: Freeplay/Parallels
 ---

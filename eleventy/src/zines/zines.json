@@ -1,8 +1,0 @@
-{
-	"tags": ["projects", "zines"],
-	"category": "zines",
-	"layout": "projectpage.njk",
-	"eleventyNavigation": {
-		"parent": "zines"
-	}
-}

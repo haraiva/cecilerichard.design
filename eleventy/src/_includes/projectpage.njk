@@ -13,9 +13,9 @@
 {% endblock %}
 
 {% block subnav %}
-	<h2>{{ category }}</h2>
+	<h2 class="subnav-title">{{ category }}</h2>
 	{% for post in collections[category] %}
-	<div id="navitem"><a id="{{ post.data.title | slugify }}" href="{{ post.url }}">{{ post.data.title }}</a></div>
+	<div class="nav-item"><a id="{{ post.data.title | slugify }}" href="{{ post.url }}">{{ post.data.title }}</a></div>
 	{% endfor %}
 {% endblock %}
 
@@ -25,9 +25,11 @@
 	<a href="/">•</a> / <a href="/{{ category }}">{{ category }}</a> / {{ title }}
 	</div>
 
-	<h4>{{ title }}</h4>
+	<h1>{{ title }}</h1>
 
 	{{ content | safe }}
+
+	<h1>✷</h1>
 	
 	<div id="tagrow">
 	{% for tag in tags %}

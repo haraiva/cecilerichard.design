@@ -1,8 +1,8 @@
 ---
-title: stepping out for a smoke
-tags: [zines]
+title: Novembre
+tags: [illustration, zines, comics]
 eleventyNavigation:
-	key: stepping out for a smoke
+	key: Novembre
 ---
 
 ![image](/img/Emblem_White_100px.png)

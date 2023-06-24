@@ -1,6 +1,6 @@
 ---
 title: Digital Rights Watch
-tags: []
+tags: [illustration, drawings]
 eleventyNavigation:
 	key: Digital Rights Watch
 ---

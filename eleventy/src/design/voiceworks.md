@@ -1,6 +1,6 @@
 ---
 title: Voiceworks
-tags: [layout]
+tags: ['print','typesetting', 'layout']
 eleventyNavigation:
 	key: Voiceworks
 ---

@@ -1,6 +1,6 @@
 ---
 title: Chimeric Herbarium
-tags: [layout]
+tags: ['print','typesetting', 'layout']
 eleventyNavigation:
 	key: Chimeric Herbarium
 ---

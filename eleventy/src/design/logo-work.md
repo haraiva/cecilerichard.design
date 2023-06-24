@@ -1,6 +1,6 @@
 ---
 title: Logo Work
-tags: [visual identity, logo]
+tags: ['visual identity', 'logo']
 eleventyNavigation:
 	key: Logo Work
 ---

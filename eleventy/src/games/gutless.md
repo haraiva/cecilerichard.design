@@ -1,6 +1,6 @@
 ---
 title: GUTLESS
-tags: [html, domino]
+tags: ['browser', 'domino club']
 eleventyNavigation:
 	key: GUTLESS
 ---

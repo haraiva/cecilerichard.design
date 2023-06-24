@@ -1,6 +1,6 @@
 ---
 title: CHVRCHES Fanzine
-tags: [layout]
+tags: ['print','typesetting', 'layout']
 eleventyNavigation:
 	key: CHVRCHES Fanzine
 ---
