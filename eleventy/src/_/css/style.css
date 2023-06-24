@@ -11,7 +11,7 @@
 	--boxWidth: 640px;
 }
 
-.lightmode {
+:root[data-theme='light'] {
 	--colBG1: #fff5d1;
 	--colBG2: #3c3938;
 	--colBG3: #9d9c9b;

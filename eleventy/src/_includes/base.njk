@@ -24,6 +24,10 @@
 	</style>
 </head>
 <body>
+	<script>
+		let theme = localStorage.getItem('theme') || 'system';
+		document.documentElement.dataset.theme = theme;
+	</script>
 	<header>
 		<div id="mainlogo">
 			<a href="/" class="logo">
