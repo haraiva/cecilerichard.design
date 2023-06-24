@@ -1,6 +1,8 @@
 ---
-title: Novena
+title: novena
 tags: [bitsy]
+eleventyNavigation:
+	key: novena
 ---
 
 ![image](/img/Emblem_White_100px.png)

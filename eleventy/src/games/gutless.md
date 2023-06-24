@@ -1,7 +1,8 @@
 ---
-title: Design 1
+title: GUTLESS
+tags: [html, domino]
 eleventyNavigation:
-	key: Design 1
+	key: GUTLESS
 ---
 
 ![image](/img/Emblem_White_100px.png)
@@ -13,4 +14,4 @@ eleventyNavigation:
 ...
 
 ## Links
-- [...]()
+- [itch.io](https://haraiva.itch.io)

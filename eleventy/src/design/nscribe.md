@@ -1,5 +1,8 @@
 ---
-title: Illustration 2
+title: nSCRIBE
+tags: [layout]
+eleventyNavigation:
+	key: nSCRIBE
 ---
 
 ![image](/img/Emblem_White_100px.png)

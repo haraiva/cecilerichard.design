@@ -8,6 +8,13 @@ eleventyNavigation:
 
 {% extends "projectpage.njk" %}
 
+{% block subnav %}
+  <h2>zines</h2>
+  {% for project in collections.zines %}
+  <div class="nav-item" id="{{ project.data.title | slugify }}"><a href="{{ project.url }}">{{ project.data.title }}</a></div>
+  {% endfor %}
+{% endblock %}
+
 {% block content %}
 <h1>{{ title }}</h1>
 <p>Select a project from the subnav menu.</p>
