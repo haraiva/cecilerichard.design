@@ -4,9 +4,9 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginTOC = require('eleventy-plugin-toc');
 
 // markdown-it + plugins
-const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
-
+const markdownItAttrs = require('markdown-it-attrs');
+const markdownItFigures = require('markdown-it-image-figures');
 
 module.exports = function(config) {
 
@@ -53,10 +53,30 @@ module.exports = function(config) {
 	config.addPassthroughCopy("src/img")
 
 	// Set parser library
-	config.setLibrary('md', markdownIt().use(markdownItAnchor));
+	config.amendLibrary('md', (md) => {
+		md.use(markdownItAnchor, {
+			permalink: markdownItAnchor.permalink.ariaHidden({
+				placement: 'after',
+				class: 'direct-link',
+				symbol: '#',
+				level: [1,2,3,4],
+			}),
+		});
+		md.use(markdownItAttrs, {});
+		md.use(markdownItFigures, {
+			lazy: true,
+			async: true,
+			figcaption: 'alt'
+
+		});
+
+	});
+	
+	//config.setLibrary('md', markdownIt().use(markdownItAnchor));
 
 	// Return config options
 	return {
+		markdownTemplateEngine: 'njk',
 		dir: {
 			input: "src",
 			output: "build"

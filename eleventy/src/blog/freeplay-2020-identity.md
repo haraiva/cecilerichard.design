@@ -85,6 +85,14 @@ Below is what it all ended up looking like, which may not be that much of a surp
 We even made animated gifs with some of the vignettes!
 
 <!-- the set of gifs below would be presented as a 2 x 2 grid -->
+---
+<div class="gallery2x2">
+	<img src="/img/fp2020/Freeplay20_sunset.gif" alt=""></img>
+	<img src="/img/fp2020/Freeplay20_sunset.gif" alt=""></img>
+	<img src="/img/fp2020/Freeplay20_sunset.gif" alt=""></img>
+	<img src="/img/fp2020/Freeplay20_sunset.gif" alt=""></img>
+</div>
+---
 
 ![animation of a sunset behind a house](/img/fp2020/Freeplay20_sunset.gif)
 ![animation of city lights in a puddle](/img/fp2020/Freeplay20_city.gif)
