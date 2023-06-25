@@ -2,6 +2,7 @@
 const { DateTime } = require("luxon");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginTOC = require('eleventy-plugin-toc');
+const pluginRSS = require("@11ty/eleventy-plugin-rss");
 
 // markdown-it + plugins
 const markdownItAnchor = require('markdown-it-anchor');
@@ -44,6 +45,9 @@ module.exports = function(config) {
 	config.addPlugin(pluginTOC, {
 		ul: true
 	});
+	
+	// Plugin: RSS
+	config.addPlugin(pluginRSS);
 	
 	// DEV: Don't duplicate passthru folders into '/build/'
 	config.setServerPassthroughCopyBehavior("passthrough");

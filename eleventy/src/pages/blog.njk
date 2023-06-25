@@ -9,7 +9,9 @@ eleventyNavigation:
 
 {% block content %}
 <h1>Blog</h1>
-
+<hr>
+<p>Below are the latest entries on my blog. You can also subscribe to the RSS/Atom feed <a href="/feed.xml">here</a>.</p>
+<hr>
 {% for post in collections.blog %}
 <a href="{{ post.url | url }}">
   <article>

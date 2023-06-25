@@ -1,0 +1,35 @@
+---
+permalink: feed.xml
+eleventyExcludeFromCollections: true
+eleventyNavigation:
+  key: feed
+  order: 99
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ site.url }}">
+  <title>{{ site.title }}</title>
+  <subtitle>{{ site.tagline }}</subtitle>
+  <link rel="self" href="{{ permalink | absoluteUrl(site.url) }}" />
+  <id>{{ site.url }}</id>
+  <icon>/favicon.ico</icon>
+  <logo>/img/social-card.png</logo>
+  <link href="{{ site.url }}"/>
+  <updated>{{ collections.blog | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <author><name>{{ site.author }}</name></author>
+
+  {%- for post in collections.blog | reverse %}
+  {%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link rel="alternate" href="{{ absolutePostUrl }}"/>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <summary xml:lang="{{ metadata.language }}" type="html">
+
+    </summary>
+    <content xml:lang="{{ metadata.language }}" type="html">
+      {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+    </content>
+  </entry>
+  {%- endfor %}
+</feed>
