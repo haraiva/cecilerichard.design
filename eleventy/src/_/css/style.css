@@ -387,6 +387,15 @@ button:active {
 	min-width: 250px;
 }
 
+.depth1::before {
+	content: "-";
+}
+
+.depth2::before {
+	content: "--";
+}
+
+
 /* MOBILE */
 @media (max-width: 800px) {
 
