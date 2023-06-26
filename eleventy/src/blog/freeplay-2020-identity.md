@@ -14,10 +14,10 @@ This is a post detailing the process and work that went into creating the [Freep
 Just like with Parallels, it all started with Freeplay Visual Art Lead and extremely talented artist Goldie Bartlett (@GhostTownGoldie) contacting me and briefing me about the project. What's this year's Freeplay theme? What are the important things we should be expressing with these visuals? Who are we talking to?
 
 What we established early on for this visual identity:
-— the theme of Freeplay 2020 is BELONGING.
-— an important element we wanted to express was the sense of community and mutual support that doesn't just stop at the Melbourne game development scene.
-— as always, not using imagery that is too videogamey. Freeplay is a games festival but it also includes and displays works by visual artists, writers, comics artists...
-— do NOT use the colours associated with other local game conferences such as GCAP.
+- the theme of Freeplay 2020 is BELONGING.
+- an important element we wanted to express was the sense of community and mutual support that doesn't just stop at the Melbourne game development scene.
+- as always, not using imagery that is too videogamey. Freeplay is a games festival but it also includes and displays works by visual artists, writers, comics artists...
+- do NOT use the colours associated with other local game conferences such as GCAP.
 
 I lost my notes from the phone call so this is all I remember but I don’t think there was anything else that was crucial (otherwise I probably would have remembered it…)
 
@@ -38,12 +38,12 @@ I talked to Goldie about this idea and she was really encouraging! In order to k
 ![early drafts including fun shapes i didn’t end up using](/img/fp2020/sketches1.jpg)
 
 The vignettes are:
-— a sunset with a house in the foreground, the feeling of comfort;
-— puddles of water reflecting a city, subtly hinting at autumn in Melbourne;
-— two cups of coffee, illustrating two people meeting up;
-— two hands holding each other, as if one was lifting the other up;
-— constellations, the connections we make during the festival;
-— the house at night with a plane flying in the background, Freeplay radiating internationally.
+- a sunset with a house in the foreground, the feeling of comfort;
+- puddles of water reflecting a city, subtly hinting at autumn in Melbourne;
+- two cups of coffee, illustrating two people meeting up;
+- two hands holding each other, as if one was lifting the other up;
+- constellations, the connections we make during the festival;
+- the house at night with a plane flying in the background, Freeplay radiating internationally.
 
 Interestingly, this was all conceptualised back in early February before the pandemic hit and yet I think the themes and aesthetics of the visuals fit especially well as this edition of Freeplay ended up becoming a digital event that included a virtual space (the Freeplay ZONE) where people could hang out in, which seemed to be a source of comfort and connection that a lot of people needed as we all isolated during lockdown.
 

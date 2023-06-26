@@ -1,13 +1,14 @@
 {% extends "base.njk" %}
 
 {% block subnav %}
+<p class="subnav-category">Contents</p>
 {{ content | toc | safe }}
 {% endblock %}
 
 {% block content %}
 <h1>{{ title }}</h1>
-<hr>
 <div id='mobile-toc'>
+<p class="subnav-category">Contents</p>
 {{ content | toc | safe }}
 <hr>
 </div>
