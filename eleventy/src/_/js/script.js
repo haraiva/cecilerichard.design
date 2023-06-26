@@ -38,7 +38,7 @@ var lastNav = null;
 function getSectionHeaders() {
 	var headers = [];
 	var main = document.getElementsByTagName('main')[0];
-	var headers = main.querySelectorAll('h2','h3','h4');
+	var headers = main.querySelectorAll('h2, h3, h4');
 	return Array.from(headers);
 }
 
