@@ -508,6 +508,54 @@ button:active {
 	content: "-";
 }
 
+.gallery2x2 {
+	display: grid;
+	gap: 8px;
+	grid-template-rows: 1fr, 1fr;
+	grid-template-columns: 1fr, 1fr;
+	grid-template-areas: 'a b' 'c d';
+}
+
+#news {
+	display: flex;
+	flex-flow: column;
+	flex-grow: 0;
+}
+
+#newsBubble {
+	border: 3px solid var(--colBG3);
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	border-radius: 3em;
+	padding: .25em .75em;
+}
+
+#newsDate {
+	color: var(--colPrimary);
+	font-size: 0.666em;
+	align-self: flex-end;
+}
+
+.nowPost {
+	position: relative;
+	width: 100%;
+	border: 2px solid var(--colBG2);
+	border-radius: 8px;
+	padding: 1em 2em;
+	min-height: 5em;
+}
+
+.nowPostDate {
+	position: absolute;
+	right: 8px;
+	bottom: 4px;
+	font-size: .8em;
+	color: var(--colPrimary);
+}
+
 /* MOBILE */
 /*@media (max-width:800px) {
 	body {

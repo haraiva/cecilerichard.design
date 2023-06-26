@@ -46,6 +46,8 @@ function getNavHeaders() {
 	var headers = [];
 	var subnav = document.getElementById('subNav');
 	var toc = subnav.querySelector('[class=toc]');
+	if (!toc) return headers;
+	
 	headers = toc.getElementsByTagName('li');
 	return Array.from(headers);
 }

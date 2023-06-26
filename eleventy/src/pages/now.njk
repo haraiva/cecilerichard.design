@@ -1,0 +1,18 @@
+---
+title: NOW
+permalink: /now/
+---
+{% extends "page.njk" %}
+
+{% block content %}
+  <h2><i class="fa-solid fa-crow"></i> Latest Posts from Cecile</h2>
+  <hr>
+  <div id='nowposts'></div>
+  <hr>
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () =>  hydrateNowPosts());
+  </script>
+
+{% endblock %}
+
+

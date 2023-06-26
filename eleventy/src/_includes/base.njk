@@ -17,6 +17,7 @@
 	<!-- FontAwesome -->
 	<script src="https://kit.fontawesome.com/87224a5bfc.js" crossorigin="anonymous"></script>
 	<script src="/js/script.js" defer></script>
+	<script src="/js/now.js" defer></script>
 	<style>
 	{% block style %}
 
@@ -39,10 +40,12 @@
 			</a>
 		</div>
 		<div id="news">
-			<i class="fa-solid fa-crow"></i>
-			<div id="newsBubble">
-				Hello.
-			</div>
+			<a href="/now">
+				<i class="fa-solid fa-crow"></i>
+			</a>
+			<div id="newsBubble">Hello.</div>
+			<div id="newsDate">unknown.</div>
+
 		</div>
 		<button id="lightToggle">
 			<i id="lighticon" class="fa-solid fa-sun"></i>
