@@ -43,7 +43,9 @@ module.exports = function(config) {
 
 	// Plugin: Table of Contence
 	config.addPlugin(pluginTOC, {
-		ul: true
+		ul: true,
+		flat: true,
+		wrapper: ''
 	});
 	
 	// Plugin: RSS
