@@ -29,6 +29,7 @@ body {
 	color: var(--colFG);
 	background-color: var(--colBG1);
 	font-family: 'Azeret Mono', sans-serif;
+	font-size: 0.9em;
 }
 
 main {
@@ -39,6 +40,17 @@ main {
 
 main img {
 	max-width: 100%;
+}
+
+main ul li p {
+	border-bottom: 1px dotted var(--colBG3);
+	padding: 2px 0;
+	margin: 12px 0;
+}
+
+main ul li > ul li {
+	border-bottom: 1px dotted var(--colBG2);
+	padding: 2px 0;
 }
 
 header {
@@ -96,6 +108,19 @@ header {
 .toc li {
 	padding-bottom: 1em;
 }
+
+.depth1::before {
+	content: "-";
+}
+
+.depth1, .depth2 {
+	margin-top: 0.2em;
+}
+
+.depth2::before {
+	content: "--";
+}
+
 
 #mobile-toc {
 	display: none;
@@ -172,6 +197,10 @@ hr {
 	width: 100%;
 }
 
+strong {
+	font-weight: 700;
+}
+
 .subnav {
 	flex-basis: 25%;
 }
@@ -211,7 +240,7 @@ hr {
 
 .logo img {
 	margin-right: 16px;
-	max-width: 30px;
+	max-width: 30px;;
 }
 
 .logo .logotype {
@@ -278,6 +307,22 @@ marquee {
 
 .submenu {
 	margin: 56px 0;
+}
+
+.tag {
+	color: var(--colBG3);
+	background-color: var(--colBG2);
+	padding: 4px;
+	font-size: 0.8em;
+}
+
+#lightToggle {
+	aspect-ratio: 1 / 1;
+}
+
+#news {
+	margin: 8px;
+	min-width: 250px;
 }
 
 /* FORM */
