@@ -2,12 +2,12 @@
 
 {% block style %}
 	#{{ title | slugify }} {
-		background-color: yellow;
+		background-color: var(--colHighlight);
 	}
 
 	{% for tag in tags %}
 	#{{ tag | slugify }} {
-		background-color: yellow;
+		background-color: var(--colHighlight);
 	}
 	{% endfor %}
 {% endblock %}

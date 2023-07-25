@@ -10,7 +10,7 @@ eleventyNavigation:
 {% block style %}
   <style>
   #about {
-  background: yellow;
+  background: var(--colHighlight);
   }
 
   main ul {
@@ -55,8 +55,8 @@ Me and my work being ~perceived~ in the world.
 
 ### Talks
 
-- [RMIT x ACMI Games Talks 2020](https://www.youtube.com/watch?v=84vfMATHoCI){target="_blank"}, 31.08.2020
 - [Meet Me in the Firepit: Rebirth and Babies and Woo in FREEPLAY ZONE 2020](https://www.youtube.com/watch?v=4G56PHYrHG4){target="_blank"}, with Jae Stuart, Freeplay Independent Games Festival 2021
+- [RMIT x ACMI Games Talks 2020](https://www.youtube.com/watch?v=84vfMATHoCI){target="_blank"}, 31.08.2020
 
 ### Interviews
 
