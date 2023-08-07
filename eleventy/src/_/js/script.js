@@ -8,7 +8,6 @@ if (theme == 'system') {
 	theme = (window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
 }
 
-document.documentElement.dataset.theme = theme;
 setTheme(theme);
 
 function setTheme(theme) {

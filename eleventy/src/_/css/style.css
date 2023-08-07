@@ -10,8 +10,8 @@
 
 	--colHighlight: #fff5d1;
 
-	--colPrimary:  	tomato;
-	--colSecondary: orangered;
+	--colPrimary:  	#c18e05;
+	--colSecondary: #64c58b;
 	--colInput: #fff5d1;
 	--boxWidth: 800px;
 }
@@ -22,6 +22,8 @@
 	--colBG3: #666253;
 	--colFG: #0c0807;
 
+	--colPrimary:  	#c18e05;
+
 	--colHighlight: #0c0807;
 }
 
@@ -31,6 +33,8 @@
 }
 
 body {
+	display:flex;
+	flex-flow: column;
 	margin: 0 auto;
 	color: var(--colFG);
 	background-color: var(--colBG1);
@@ -65,7 +69,7 @@ header {
 	flex-flow: row wrap;
 	align-items: center;
 	justify-content: space-between;
-	padding: 24px;
+	padding: 8px;
 	border-bottom: 2px solid var(--colBG2);
 }
 
@@ -165,10 +169,8 @@ button:disabled {
 }
 
 footer {
-	padding: 24px;
+	padding: 8px;
 	border-top: 2px solid var(--colBG2);
-	position: relative;
-	bottom: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -307,6 +309,7 @@ blockquote {
 #news {
 	margin: 8px;
 	min-width: 250px;
+	max-width: 400px;
 }
 
 /* FORM */
