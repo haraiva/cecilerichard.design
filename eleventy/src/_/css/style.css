@@ -152,6 +152,11 @@ main > article > p, main > article > ul {
 	margin: 24px 0;
 }
 
+img {
+	background-image: radial-gradient(var(--colBG2) 0.1px, transparent 1px);
+	background-size: calc(20 * 1px) calc(20 * 1px);
+}
+
 
 /* ORIGINAL */
 :disabled {
