@@ -33,7 +33,7 @@
 }
 
 body {
-	display:flex;
+	display: flex;
 	flex-flow: column;
 	margin: 0 auto;
 	color: var(--colFG);
@@ -42,6 +42,7 @@ body {
 	font-size: 0.9em;
 	letter-spacing: 0.02em;
 	font-weight: 300;
+	min-height: 100vh;
 }
 
 main {
@@ -75,8 +76,8 @@ header {
 
 #view {
 	display: flex;
+	flex-grow: 2;
 	flex-flow: row;
-	min-height: 600px;
 	align-items: flex-start;
 }
 
