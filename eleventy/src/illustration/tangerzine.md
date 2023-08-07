@@ -5,13 +5,7 @@ eleventyNavigation:
 	key: Tangerzine
 ---
 
-![image](/img/Emblem_White_100px.png)
+Illustrations made for [Tangerzine #6, Fluid](https://tangerzine.tumblr.com/edicion/fluid). Tangerzine was a Chilean webzine, directed by artist Sebastián Brize.
 
-...
-
-## Subheader
-
-...
-
-## Links
-- [...]()
+![](/img/tangerzine-1.gif)
+![](/img/tangerzine-2.gif)

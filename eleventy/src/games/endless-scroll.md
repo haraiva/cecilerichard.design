@@ -5,13 +5,10 @@ eleventyNavigation:
 	key: ENDLESS SCROLL
 ---
 
-![image](/img/Emblem_White_100px.png)
-
-...
-
-## Subheader
-
-...
+✨💻 ENDLESS SCROLL 💌✨ is a Bitsy game commissioned by Australian literary journal Voiceworks, published in December 2019 as part of their digital edition. It’s a game about high school memories, growth and being online late at night.
 
 ## Links
-- [itch.io](https://haraiva.itch.io)
+- You can play the game on Voiceworks Online or itch.io.
+- Use the arrow keys to move around and interact
+- Playtime: 10–15min
+

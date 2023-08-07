@@ -5,13 +5,10 @@ eleventyNavigation:
 	key: ( C Y C L E )
 ---
 
-![image](/img/Emblem_White_100px.png)
+( C Y C L E ) aka CYCLE is a strange, ominous interactive story about Melbourne, urban legends, tunnels, the workers that dig them… and what lies underground.
 
-...
+Made entirely in pure HTML, CSS and JS, ( C Y C L E ) was released as part of DOMINO CLUB’s Subterranean Jam in April 2022, under the pseudonym "slipperman".
 
-## Subheader
-
-...
-
-## Links
-- [itch.io](https://haraiva.itch.io)
+- You can play/read the story on itch.io.
+- Can be viewed on both desktop and mobile.
+- Playtime: 10–15min

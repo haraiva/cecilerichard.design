@@ -5,13 +5,7 @@ eleventyNavigation:
 	key: Magpies
 ---
 
-![image](/img/Emblem_White_100px.png)
+Duochrome linocut prints made in 2020 for Festival of the Photocopier.
 
-...
-
-## Subheader
-
-...
-
-## Links
-- [...]()
+![](/img/magpie-1.jpg)
+![](/img/magpie-2.jpg)
