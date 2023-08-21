@@ -23,14 +23,3 @@ eleventyNavigation:
 	<img src="/img/zines/tsld/11.jpg">
 	<img src="/img/zines/tsld/12.jpg">
 </zine-reader>
-
-<!-- ![image](/img/Emblem_White_100px.png)
-
-...
-
-## Subheader
-
-...
-
-## Links
-- [...]() -->

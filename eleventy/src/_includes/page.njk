@@ -3,5 +3,15 @@
 {% block style %}
 	#{{ title | slugify }} {
 		background-color: var(--colHighlight);
+		color: var(--colActiveNav);
+	}
+
+	#{{ title | slugify }} a {
+		color: var(--colActiveNav);
+	}
+
+	#{{ title | slugify }}:before{
+		content: '/ ';
+		color: var(--colActiveNav);
 	}
 {% endblock %}

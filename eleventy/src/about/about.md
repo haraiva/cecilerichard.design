@@ -10,7 +10,17 @@ eleventyNavigation:
 {% block style %}
   <style>
   #about {
-  background: var(--colHighlight);
+    background: var(--colHighlight);
+    color: var(--colActiveNav);
+  }
+
+  #about a {
+    color: var(--colActiveNav);
+  }
+
+  #about:before {
+    content: '/ ';
+    color: var(--colActiveNav);
   }
 
   main ul {

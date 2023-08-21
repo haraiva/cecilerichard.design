@@ -3,6 +3,16 @@
 {% block style %}
 	#{{ title | slugify }} {
 		background-color: var(--colHighlight);
+		color: var(--colActiveNav);
+	}
+
+	#{{ title | slugify }} a {
+		color: var(--colActiveNav);
+	}
+
+	#{{ title | slugify }}:before{
+		content: '/ ';
+		color: var(--colActiveNav);
 	}
 {% endblock %}
 
@@ -22,12 +32,12 @@
 	<h1>{{ title }}</h1>
 
 	{{ content | safe }}
-
-	<h1>✷</h1>
 	
 	<div id="tagrow">
 	{% for tag in tags %}
 		<span class="tag">{{ tag }}</span>
 	{% endfor %}
 	</div>
+
+	<h1>✷</h1>
 {% endblock %}

@@ -5,7 +5,9 @@ eleventyNavigation:
 	key: nSCRIBE
 ---
 
-Full layout design for the 2020 edition of Darebin Arts’ annual literary magazine n-SCRIBE, which features fiction, non-fiction, poetry, short stories, journalistic pieces, creative non-fiction, and memoirs. 
+Full layout design for the 2020 edition of Darebin Arts’ annual literary magazine n-SCRIBE, which features fiction, non-fiction, poetry, short stories, journalistic pieces, and memoirs. 
+
+## Info
 
 - 48 pages
 - 195x270mm

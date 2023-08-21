@@ -3,11 +3,31 @@
 {% block style %}
 	#{{ title | slugify }} {
 		background-color: var(--colHighlight);
+		color: var(--colActiveNav);
+	}
+
+	#{{ title | slugify }} a {
+		color: var(--colActiveNav);
+	}
+
+	#{{ title | slugify }}:before{
+		content: '/ ';
+		color: var(--colActiveNav);
 	}
 
 	{% for tag in tags %}
 	#{{ tag | slugify }} {
 		background-color: var(--colHighlight);
+		color: var(--colActiveNav);
+	}
+
+	#{{ tag | slugify }} a {
+		color: var(--colActiveNav);
+	}
+
+	#{{ tag | slugify }}:before{
+		content: '/ ';
+		color: var(--colActiveNav);
 	}
 	{% endfor %}
 {% endblock %}
@@ -32,14 +52,16 @@
 
 	<h1>{{ title }}</h1>
 	
+	<div class="content">
 	{{ content | safe }}
-	
-	<hr>
-	<h1 style="text-align: center">✷</h1>
+	</div>
 	
 	<div id="tagrow">
 	{% for tag in tags %}
 		<span class="tag">{{ tag }}</span>
 	{% endfor %}
 	</div>
+
+	<hr>
+	<h1 style="text-align: center">✷</h1>
 {% endblock %}
