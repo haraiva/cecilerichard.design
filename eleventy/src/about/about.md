@@ -70,16 +70,17 @@ Me and my work being ~perceived~ in the world.
 
 ### Interviews
 
-- [Preserving Worlds Season 2 Episode 07: DIY - You Gotta Put in the Work](https://means.tv/programs/preservingworlds?cid=3182930&permalink=207-diy){target="_blank"}, by Derek Murphy and Mitchell Zemil for MEANS TV / 22.06.2023
+- [Preserving Worlds Season 2 Episode 07: DIY - You Gotta Put in the Work](https://means.tv/programs/preservingworlds?cid=3182930&permalink=207-diy){target="_blank"}, with Jae Stuart, by Derek Murphy and Mitchell Zemil for MEANS TV / 22.06.2023
 - [The design and philosophy behind ephemeral game exhibition HYPER//ECHO](https://www.gamedeveloper.com/design/the-design-and-philosophy-behind-ephemeral-video-game-exhibition-hyper-echo){target="_blank"}, by Chris Kerr for Game Developer / 22.06.2022
 - [Interview #196 — Cecile Richard](https://www.liminalmag.com/interviews/cecile-richard){target="_blank"}, by Mia Nie for LIMINAL / 20.12.2021
-- [Making games about memory and longing](https://www.byteside.com/2021/06/cecile-richard-profile-makin-games-about-memory-and-longing/){target="_blank"}, Emma Hartley for Byteside / 17.06.2021
+- [Making games about memory and longing](https://www.byteside.com/2021/06/cecile-richard-profile-makin-games-about-memory-and-longing/){target="_blank"}, by Emma Hartley for Byteside / 17.06.2021
 
 ### Features
 
 - [HYPER//ECHO: a traveller's diary](https://www.acmi.net.au/stories-and-ideas/hyper-echo-firepit-a-travellers-diary-claire-osborn-li/){target="_blank"}, a fortnightly journal by Claire Osborn-Li / 05.04.2022 → 28.06.2022
 - [HYPER//ECHO delves into the transience of our digital world](https://www.gameshub.com/news/features/hyper-echo-acmi-exhibition-firepit-collective-cecile-richard-jonathan-tree-19755/){target="_blank"}, by Emily Spindler for GamesHub / 31.05.2022
 - [The 10 best video games made in Australia](https://www.theguardian.com/games/2022/may/02/the-10-best-video-games-made-in-australia-sorted){target="_blank"}, by Leena van Deventer for The Guardian / 02.05.2022
+- [Embracing Decline](http://jakec.net/decline.html){target="_blank"} by Jake Cleland / 02.05.2022
 - [Bitsy is the small video game engine with a big community](https://www.theverge.com/22929485/bitsy-tiny-video-game-engine){target="_blank"}, by Lewis Gordon for The Verge / 08.03.2022 
 - [God, give me a body: How virtual events and museums can be better](https://www.gameshub.com/news/features/how-virtual-events-and-museums-can-be-better-god-give-me-a-body-7123/){target="_blank"}, by Claire Osborn-Li for GamesHub / 10.11.2021
 - [Australian Game Developers are Perfecting Simplicity](https://www.gameshub.com/news/opinions-analysis/perfecting-simplicity-topography-spiritwell-trios-6149/){target="_blank"}, by Nidula Geeganage for GamesHub / 28.10.2021

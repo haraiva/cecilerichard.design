@@ -9,6 +9,5 @@ eleventyNavigation:
 
 Made entirely in pure HTML, CSS and JS, ( C Y C L E ) was released as part of DOMINO CLUB’s Subterranean Jam in April 2022, under the pseudonym "slipperman".
 
-- You can play/read the story on itch.io.
-- Can be viewed on both desktop and mobile.
+→ You can play/read the story on itch.io.
 - Playtime: 10–15min

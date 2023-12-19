@@ -10,15 +10,15 @@ eleventyNavigation:
 
 {% block subnav %}
   <h2 class="subnav-title">illustration</h2>
-    <p class="subnav-category">drawings</p>
+    <div class="subnav-category">drawings</div>
       {% for project in collections.drawings %}
       <div class="nav-item" id="{{ project.data.title | slugify }}"><a href="{{ project.url }}">{{ project.data.title }}</a></div>
       {% endfor %}
-    <p class="subnav-category">game art</p>
+    <div class="subnav-category">game art</div>
       {% for project in collections['game art'] %}
       <div class="nav-item" id="{{ project.data.title | slugify }}"><a href="{{ project.url }}">{{ project.data.title }}</a></div>
       {% endfor %}
-    <p class="subnav-category">zines</p>
+    <div class="subnav-category">zines</div>
       {% for project in collections.zines %}
       <div class="nav-item" id="{{ project.data.title | slugify }}"><a href="{{ project.url }}">{{ project.data.title }}</a></div>
       {% endfor %}

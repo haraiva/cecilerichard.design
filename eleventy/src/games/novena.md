@@ -7,7 +7,9 @@ eleventyNavigation:
 
 <img src="/img/novena-title.gif" alt="">
 
-*novena* is an interactive poem made with [Bitsy](https://make.bitsy.org/), published in June 2018. This game was made as part of the [14th monthly Bitsy Jam](https://itch.io/jam/ocean-bitsy), with the theme “Ocean”.
+*novena* is an interactive poem about the burden of strength and the fruits of perseverance made with [Bitsy](https://make.bitsy.org/).
+
+It was published in June 2018. This game was made as part of the [14th monthly Bitsy Jam](https://itch.io/jam/ocean-bitsy), with the theme “Ocean”.
 
 → You can [play novena on itch.io](https://haraiva.itch.io/novena).
 - Instructions: Press arrow keys to move around and interact
@@ -24,6 +26,10 @@ eleventyNavigation:
 </div>
 
 ---
+
+## Awards
+
+*novena* won the 2019 Freeplay Micro-Game Award, and nominated for Excellence in Visual Art.
 
 ## Exhibitions 
 
@@ -42,9 +48,3 @@ eleventyNavigation:
 - [Priceless Pay](https://www.rockpapershotgun.com/priceless-play-11-may), 11 May 2019, Rock Paper Shotgun
 - [Novena](https://oujevipo.fr/general/6898-novena/), 8 June 2018, Oujevipo
 - [Bitsy Jam (Ocean): novena](https://game-curator.com/jams/bitsy-jam-ocean-novena/), 4 June 2018, game curator
-
-## Talks
-
-i got to talk about the game at the ‘18 Parallels event and at RMIT x ACMI Games Talks 2020.
-
-## Interviews

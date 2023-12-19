@@ -42,7 +42,7 @@
 				</div>
 			</a>
 		</div>
-			
+		<div class="divider"></div>
 		<div id="buttons">
 			<div id="news">
 					<a href="/now">
@@ -73,8 +73,8 @@
 				<a href="{{ entry.url | url }}">{{ entry.title }}</a>
 			</div>
 
-			{% if loop.index % 3 == 0 or loop.index % 7 == 0 %}
-				<br>
+			{% if loop.index % 3 == 0 %}
+				<hr>
 			{% endif %}
 
 			{% endfor %}
@@ -95,7 +95,8 @@
 		<span>
 		&copy; cecile richard <span id="year">2023</span><script>document.getElementById("year").innerText = new Date().getFullYear();</script>
 		</span>
-		<span>↑</span>
+		<div class="divider"></div>
+		<a href="#">[↑]</a>
 	</footer>
 </body>
 </html>

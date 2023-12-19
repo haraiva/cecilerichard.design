@@ -1,5 +1,13 @@
 {% extends "base.njk" %}
 
+{% block style %}
+#subNav {
+	background: var(--colBG1);
+	border: 1px solid var(--colFrame);
+	box-shadow: 4px 4px var(--colFrame);
+}
+{% endblock %}
+
 {% block subnav %}
 <p class="subnav-category">Contents</p>
 {{ content | toc | safe }}
