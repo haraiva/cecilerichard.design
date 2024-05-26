@@ -9,10 +9,8 @@
 	<title>cecile richard / design ✷ illustration ✷ games</title>
 
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
-	<link rel="stylesheet" href="style.css">
-	<script type="text/javascript" src="./scripts/main.js" defer></script>
-
-	<link href="https://api.fontshare.com/v2/css?f[]=azeret-mono@2,1&f[]=epilogue@2,1&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="./css/style.css">
+	<script type="text/javascript" src="./js/main.js" defer></script>
 
 	<meta property="og:title" content="Cecile Richard"/>
 	<meta name="description" content="design ✷ illustration ✷ games.">
@@ -25,76 +23,64 @@
 
 </head>
 <body>
-	<main>
-		<header>
-			<a href="./index.html" class="logo">
-				<img id="emblem" src="./img/Emblem_White_100px.png">
-				<div class="logotype">
-					<h1 class="name">cecile&nbsp;richard</h1>
-					<p class="subtitle">design&nbsp;✷&nbsp;illustration&nbsp;✷&nbsp;games</p>
-				</div>
-			</a>
-		<div class="menu">
-<!-- 			<h3><a id="works" onclick="toggleVisibility('works_menu');">works</a><br>
-				<div id="works_menu" style="display:block;">
-					design<br>
-					illustration<br>
-					games<br>
-					zines<br>
-				</div>
-			</h3> -->
-			<h3><a href="./info.html">info + cv</a><br>
-				<a href="./contact.html">contact</a><br></h3>
-			<h3><a class="current" href="./index.html">index</a></h3>
-		</div>
-		</header>
-		<div class="subnav">
-			<div class="news">
-				<i class="fa-solid fa-crow"></i>
-				<p>(</p>
-				<marquee direction="left"><p>i'm building a new website!</p></marquee>
-			</div>
-		</div>
-		<div class="content">
-			<div class="text-box">
-				<h2>hi! i'm <a href="./info.html">cecile</a> and i'm a graphic designer, zine maker, and game designer.</h2>
-				<h2>/!\ i'm building a new website at the moment. /!\</h2>
-				<h2>you can find my socials on <a href="contact.html">my contact page</a>, and check out my games on <a href="https://haraiva.itch.io" target="_blank">itch.io</a>.</h2>
-			</div>
+	<script>
+		let theme = localStorage.getItem('theme') || 'system';
+		document.documentElement.dataset.theme = theme;
+	</script>
+	<header>
+		<button href="./index.html" id="logo">
+			<h1 class="name">[ cecile richard ]</h1>
+		</button>
+		<hr>
+		<button id="lightswitch" title="Toggle Light/Dark Mode">
+			<i id="lighticon" class="fa-solid fa-sun"></i>
+		</button>
+	</header>
+	<nav class="menu">
+		<ul>
+			<li><h2><a href="./info.html">info + cv</a><br></h2></li>
+			<li><h2><a href="./contact.html">contact</a><br></h2></li>
+			<li><h2><a class="current" href="./index.html">index</a></h2></li>
+		</ul>
+		<img id="emblem" src="./img/Emblem_Black_100px.png">
+	</nav>
+	<main class="content">
+		<section id="intro">
+			<p>hi! i'm <a href="./info.html">cecile</a> and i'm a graphic designer, zine maker, and game designer.</p>
+			<p>/!\ i'm building a new website at the moment. /!\</p>
+			<p>you can follow me on <a href="https://twitter.com/haraiva" target="_blank">twitter</a>, <a href="https://instagram.com/cecilerichard.design" target="_blank">instagram</a> and check out my games on <a href="https://haraiva.itch.io" target="_blank">itch.io</a>.</p>
 			<hr>
-			<div class="text-box">
-				<h2>you can still contact me by sending an email to hey.cecilerichard✷at✷gmail.com<br>or complete the form below ↓</h2>
-			</div>
-			<form id="contactform" action="https://formsubmit.co/26be23b3556f28c35288d08c460a59ce" method="POST" target="_blank">
-				<h2>get in touch</h2>
-				  <label>
-				    <span><i class="fa-solid fa-user"></i></span>
-				    <input type="name" name="name" placeholder="name" required>
-				  </label>
-				  <label>
-				    <span><i class="fa-solid fa-at"></i></span>
-				    <input type="email" name="email" placeholder="email" required>
-				  </label>
-				  <label>
-				    <span><i class="fa-solid fa-quote-right"></i></span>
-				    <input type="subject" name="_subject" placeholder="subject" required>
-				  </label>
-				  <label>
-				    <span><i class="fa-solid fa-message"></i></span>
-				    <textarea name="message" placeholder="message" rows="4" required></textarea>
-				  </label>
-				  <!-- Settings -->
-				  <!-- <input type="hidden" name="_next" value="http://localhost:8080/thanks.html"> -->
-				  <input type="hidden" name="_template" value="table">
-				  <input type="hidden" name="_autoresponse" value="Thank you! Here is a copy of your message.">
+			<p>you can still contact me by sending an email to hey.cecilerichard✷at✷gmail.com<br>or complete the form below ↓</p>
+		</section>
 
-				  <button type="submit">send ↗</button>
-			</form>
+		<form id="contactform" action="https://formsubmit.co/26be23b3556f28c35288d08c460a59ce" method="POST" target="_blank">
+			<h2>get in touch</h2>
+			  <label>
+			    <span><i class="fa-solid fa-user"></i></span>
+			    <input type="name" name="name" placeholder="name" required>
+			  </label>
+			  <label>
+			    <span><i class="fa-solid fa-at"></i></span>
+			    <input type="email" name="email" placeholder="email" required>
+			  </label>
+			  <label>
+			    <span><i class="fa-solid fa-quote-right"></i></span>
+			    <input type="subject" name="_subject" placeholder="subject" required>
+			  </label>
+			  <label>
+			    <span><i class="fa-solid fa-message"></i></span>
+			    <textarea name="message" placeholder="message" rows="4" required></textarea>
+			  </label>
+			  <!-- Settings -->
+			  <!-- <input type="hidden" name="_next" value="http://localhost:8080/thanks.html"> -->
+			  <input type="hidden" name="_template" value="table">
+			  <input type="hidden" name="_autoresponse" value="Thank you! Here is a copy of your message.">
 
-		</div>
+			  <button type="submit">send ↗</button>
+		</form>
 	</main>
+
 	<footer>
-		<!-- <div class="footer-flex"> -->
 			<div>
 				<p>&copy; cecile richard <span id="year">2023</span></p>
 				<script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
@@ -102,10 +88,6 @@
 			<div style="text-align:center;">
 				<p>✷</p>
 			</div>
-			<div style="text-align:right;">
-				<i onclick="toggleTheme(this)" class="fa-solid fa-crow"></i>
-			</div>
-		<!-- </div> -->
 	</footer>
 </body>
 </html>

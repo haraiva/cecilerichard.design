@@ -1,14 +1,32 @@
-function toggleTheme(x) {
-   x.classList.toggle("fa-circle");
-   var element = document.querySelector(":root");
-   element.classList.toggle("lightmode");
-   var image = document.getElementById('emblem');
-   if (image.src.match("White")) {
-      image.src = "./img/Emblem_Black_100px.png";
-   } else {
-      image.src = "./img/Emblem_White_100px.png"
-   }
+// THEME TOGGLE
+const buttonLight = document.getElementById('lightswitch');
+const lightIcon = document.getElementById('lighticon');
+const emblem = document.getElementById('emblem');
+
+if (theme == 'system') {
+    theme = (window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
 }
+
+setTheme(theme);
+
+function setTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+
+    // Update Icons/Emblems
+    if (theme == 'dark') {
+        lightIcon.classList.add('fa-moon');
+        emblem.src = './img/Emblem_Black_100px.png';
+    } else {
+        lightIcon.classList.remove('fa-moon');
+        emblem.src = './img/Emblem_White_100px.png';
+    }
+}
+
+buttonLight.addEventListener('click', () => {
+    theme = (theme == 'light') ? 'dark' : 'light';
+    localStorage.setItem('theme', theme);
+    setTheme(theme);
+});
 
 function toggleVisibility(id) {
       var x = document.getElementById(id);
