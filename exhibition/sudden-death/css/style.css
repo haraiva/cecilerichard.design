@@ -1,0 +1,819 @@
+@font-face {
+    font-family: 'Writer';
+    src: url('../fonts/Writer-Bold.woff2') format('woff2'),
+        url('../fonts/Writer-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Writer';
+    src: url('../fonts/Writer-Italic.woff2') format('woff2'),
+        url('../fonts/Writer-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Writer';
+    src: url('../fonts/Writer-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Writer-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Writer';
+    src: url('../fonts/Writer-Regular.woff2') format('woff2'),
+        url('../fonts/Writer-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bigger';
+    src: url('../fonts/BiggerDisplay.woff2') format('woff2'),
+        url('../fonts/BiggerDisplay.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+* {
+    box-sizing: border-box;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+:root {
+	/* these apply to both jupiter and inkrunner! */
+	font-family: 'Writer', monospace;
+	font-size: 16px;
+	background-color: var(--dark);
+	color: var(--light);;
+
+	--fontTitle: 'Bigger', sans-serif;
+	--fontText: 'Writer', monospace;
+
+	--light: white;
+    --dark: black;
+    --accent: #abc26b; /* this is the background filter colour */
+
+}
+
+html {
+	color-scheme: dark light;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+[data-ir-role="container"][data-ir-active="true"]{
+	display: flex;
+	flex-flow: column;
+	position: relative;
+	height: 100vh;
+	height: 100svh;
+	width: 75ch;
+	padding: 1rem;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+}
+
+[data-ir-role="container"][data-ir-active="false"] {
+	padding: 1rem;
+}
+
+[data-ir-role="choicebox"] {
+	display: flex;
+	flex-flow: column;
+	gap: 0.5rem;
+}
+
+a, [data-ir-role="choice"] {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+[data-ir-role="continue"] {
+	background-color: white;
+	clip-path: polygon(0% 0%, 100% 0%, 50% 100%, 0% 0%);
+	margin-left: auto;
+	height: calc(0.866 * 1rem);
+	width: 1rem;
+	flex-shrink:0;
+}
+
+#jump {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2rem;
+	aspect-ratio: 1;
+	background-color: red;
+}
+
+#jump:hover {
+	background-color: white;
+	cursor: pointer;
+}
+
+.red {
+	color: orangered;
+}
+
+.green {
+	background-color:darkgreen;
+}
+
+
+#canvas {
+	padding: 12px;
+	display: grid;
+	grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+video {
+	width: 100vw;
+	height: 100vh;
+}
+
+/* video and background container */
+
+#bgContainer {
+	position: absolute;
+	inset: 0;
+	width: 100%; height: 100%;
+	background-color: white;
+}
+
+#bgContainer video {
+	position: absolute;
+	object-fit: cover;
+	inset: 0;
+	mix-blend-mode: multiply;
+}
+
+.bgJuicing { background-image: linear-gradient(orangered, red); }
+
+.bgInterview {  }
+
+.bgScreenplay { z-index: -100; background: transparent !important; }
+.bgScreenplay .background { mix-blend-mode: normal; object-fit: contain;}
+
+.bgTrouble { background-image: linear-gradient(#3fa0a0, #c4698d); }
+
+.bgTraining { background-image: linear-gradient(#69ffa4, #abc26b); }
+
+.bgDrive { background-image: linear-gradient(#d80a6a, #ed8c52); }
+
+.bgSex { background-image: linear-gradient(#d80a6a, #30006a); }
+
+.bgSubstance { background-image: linear-gradient(#3fa0a0, #ed8c52); }
+
+.bgRevolution { background-image: linear-gradient(#d80a6a, orangered); }
+
+.background {
+	/* z-index: -100;*/
+    position: fixed;
+    inset: 0;
+    object-fit: cover;
+    width:100%;
+    height:100%;
+    mix-blend-mode: multiply;
+}
+
+#canvas > .background {
+	opacity: 0.5;
+	mix-blend-mode: normal;
+}
+
+/* containers */
+
+/* menu */
+#menu {
+	position: absolute;
+	inset: 0;
+	display: grid;
+	grid-template-columns: 65% 35%;
+	align-items: center;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	background-color: var(--light);
+/*	background-image: url("../images/bg-menu.png");*/
+	color: black;
+
+	grid-template-areas: 
+	'logo text'
+	'logo choice';
+}
+
+[data-ir-name="menucrest"] {
+	height: 100%;
+	margin-inline: auto;
+	max-width: 90%;
+	grid-area: logo;
+}
+
+#menu p { grid-area: text; align-self: end; max-width: 40ch;}
+
+#menu [data-ir-role="choicebox"] {
+	display: flex;
+	flex-flow: column;
+	text-transform: uppercase;
+	border-left: 4px double var(--accent);
+	padding-left: 8px;
+
+	grid-area: choice; align-self: start;
+}
+
+#menu a {
+	text-decoration: none;
+/*	background-color: var(--light);*/
+	color: var(--dark);
+	padding-inline: 12px;
+	padding-block: 4px;
+	width: 100%;
+	height: 32px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: clip;
+}
+
+#menu a:hover {
+	background-color: var(--accent);
+	font-style: italic;
+	letter-spacing: 24px;
+	transition: all 0.2s ease;
+}
+
+/*#menu a:last-of-type:hover {
+	--accent: orange;
+}*/
+
+#menu a:hover:before { content: '>'; }
+
+/* titlecard */
+#titlecard {
+	z-index: 3000; /* FUCKING jupiter almost broke this game and ME surely this will save us */
+	position: fixed;
+    inset: 0;
+	font-family: 'Bigger';
+	font-size: 5em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--dark);
+
+}
+
+#titlecard p, #quotecard p { margin: 0.2em }
+
+#titlecard [data-ir-role="continue"], #quotecard [data-ir-role="continue"] { margin-inline: auto; display: none}
+
+#quotecard {
+	background: var(--dark);
+	z-index: 100;
+	position: fixed;
+    inset: 0;
+    text-transform: uppercase;
+	letter-spacing: 2px;
+	font-family: 'Bigger';
+	font-size: 2em !important;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin-inline: auto;
+	padding-inline: 0;
+	padding-top: 20%;
+}
+
+#quotecard p { width: 800px; margin-inline: auto;}
+
+#quotecard img { width: 10vw; max-width: 140px; }
+
+#titlecard.fullcredits p {
+	width: 100%;
+}
+
+#titlecard table { width: 100% }
+
+#titlecard td {
+	padding-block: 0.2em;
+	width: 50%;
+}
+
+#titlecard td.singlerow { text-align: center; padding-bottom: 1em; }
+
+/* tape window rip-off :) */
+#inkwindow {
+	display: flex;
+	flex-flow: column;
+	background-color: var(--dark);
+	border: 1px solid var(--light);
+	height: 70%;
+	width: 100%;
+	grid-area: 1 / 3 / 5 / 5;
+	justify-self: center;
+	align-self: center;
+	overflow: scroll;
+	padding-bottom: 64px;
+}
+
+#inkwindow > :first-child { /* this is for scrollin from the bottom */
+	margin-top: auto !important;
+}
+
+#inkwindow [data-ir-role="continue"]{
+	animation: blink 2s linear infinite;
+} 
+
+#inkwindow[data-ir-role="container"][data-ir-active="false"] {
+/*	padding-bottom: calc(10em + 16px + 0.866 * 1rem);*/
+}
+
+#inkwindow > p { opacity: 0.5 }
+
+#inkwindow > p:last-of-type {
+	opacity: 1;
+}
+
+/* sex scene container */
+
+#inkwindow.sex {
+	border: 1px solid var(--dark);
+	color: #b30c4d;
+/*	box-shadow: 0 0 32px var(--dark);*/
+	text-shadow: 0 0 12px #b30c4d;
+	grid-area: 2 / 3 / 4 / 5;
+	height: 100%;
+}
+
+#inkwindow.sex > p:last-of-type{
+	color: var(--light);
+}
+
+#inkwindow.sex [data-ir-role="continue"]{
+	background-color: #b30c4d;
+	animation: pulse 1s ease-in alternate infinite;
+} 
+
+#portraitTopRight, #portraitBottomLeft {
+	z-index: 10;
+	border: 1px solid var(--light);
+	background-color: var(--dark);
+	height: 100%;
+	width: auto;
+	aspect-ratio: 1;
+	padding: 0;
+	position: relative;
+}
+
+#portraitBottomLeft {  }
+
+#portraitTopRight img, #portraitBottomLeft img {
+	width: 100%;
+	position: absolute;
+}
+
+.transparent {
+	border: 0 !important;
+	background-color: transparent;
+}
+
+#portraitTopRight.sex, #portraitBottomLeft.sex { border: 0 !important; background-color: #b30c4d;}
+#portraitTopRight.sex img, #portraitBottomLeft.sex img { mix-blend-mode: multiply;}
+
+.flipped {
+	-webkit-transform: scaleX(-1);
+  	transform: scaleX(-1);
+}
+
+#portraitTopRight > :nth-child(2).flipped, #portraitBottomLeft > :nth-child(2).flipped {
+	-webkit-ttransform: translateY(-181px) scaleX(-1);
+	transform: translateY(-181px) scaleX(-1);
+}
+
+#portraitTopRight > :nth-child(3).flipped, #portraitBottomLeft > :nth-child(3).flipped {
+	-webkit-transform: translateY(-362px), scaleX(-1);
+	transform: translateY(-362px), scaleX(-1) !important;
+
+}
+
+#portraitTopRight {
+	grid-area: 2 / 5 / 3 / 6;
+}
+
+#portraitBottomLeft {
+	grid-area: 3 / 2 / 4 / 3;
+	justify-self: flex-end;
+}
+
+/* dream tube rip off */
+
+#inktube {
+	background-color: var(--dark);
+	border: 1px solid var(--light);
+	height: auto !important; width: auto !important;
+ 	justify-self: center;
+ 	max-width: 300px;
+ 	z-index: 100;
+}
+
+.poem {
+	z-index:3;
+	grid-area: 2 / 3 / 4 / 5 !important;
+	text-transform: uppercase;
+	height: 100% !important;
+}
+
+.poem[data-ir-role="container"][data-ir-active="false"]{ 
+	padding-bottom: calc(64px + 0.866 * 1rem) !important;
+}
+
+#inktube [data-ir-role="continue"], #inktube [data-ir-role="continue"] { display: none; }
+
+.topleft {
+	grid-area: 1 / 2 / 3 / 4;
+}
+
+.bottomright {
+	grid-area: 3 / 4 / 5 / 6;
+}
+
+.portrait-racing {
+	grid-area: 2 / 5 / 4 / 6;
+	height: 100%;
+	object-fit: cover;
+	transform: translateX(-50%);
+	z-index: -1;
+}
+
+/* the game */
+#match {
+	background-color: var(--dark);
+	border: 1px double var(--light);
+	grid-area: 1 / 4 / 4 / 6;
+	align-self: center;
+	justify-self: flex-start;
+	width: 100%;
+	height: 100%;
+}
+
+#match[data-ir-role="container"][data-ir-active="false"] {
+ 	display: flex;
+ 	flex-flow: column;
+}
+
+.actor {
+	display: block;
+	text-align: center;
+}
+
+.scene {
+	font-weight: bolder;
+}
+
+.line {
+	display: inline-block;
+	margin-inline: 48px;
+
+}
+
+.SuddenDeath {
+	background-color: orangered !important;
+	color: var(--dark) !important;
+}	
+
+.FullTime {
+	background-color: var(--light) !important;
+	color: var(--dark) !important;
+}
+
+#chyron {
+	grid-area: 1 / 1 / 4 / 2;
+	width: 100%;
+	height: auto;
+	align-self: flex-end;
+	padding: 0;
+	font-family: 'Bigger', sans-serif;
+	letter-spacing: 2px;
+	border: 1px solid var(--light);
+	background-color: var(--dark);
+}
+
+#chyron p {
+	margin: 0;
+	display: flex;
+	flex-flow: column;
+}
+
+#chyron .Team {
+	padding-inline: 12px;
+	padding-top: 12px;
+	font-size: 5.5em;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#chyron .Pikers {
+	color: var(--light);
+}
+
+#chyron .Pikers:before {
+	content:'PIK ';
+}
+
+#chyron .Hounds {
+	background-color: var(--light);
+	color: var(--dark);
+}
+
+#chyron .Hounds:before {
+	content:'HOU ';
+}
+
+
+#chyron .Time {
+	padding: 12px;
+	padding-top: 32px;
+	display: block;
+	text-align: center;
+	font-size: 7em;
+	width: 100%;
+	color: var(--light);
+}
+
+#chyron .Quarter {
+	border-top: 1px solid var(--light);
+	border-bottom: 24px solid var(--light);
+	padding: 12px;
+	padding-bottom: 2px;
+	font-size: 3em;
+	display: block;
+	text-align: right;
+	color: var(--light);
+}
+
+#chyron [data-ir-role="continue"] { display: none; }
+
+.heatmap, #heatmap {
+	width: 100%;;
+	height: 100%;
+	grid-area: 4 / 4 / 5 / 5;
+	border: 1px solid var(--light);
+	align-self: flex-end;
+	justify-self: flex-end;
+	background-color: var(--dark);
+}
+
+.screenplay {
+	max-height: 100%;
+	overflow: hidden;
+	padding: 0 !important;
+}
+
+.scoreworm, #scoreworm {
+	grid-area: 1 / 2 / 2 / 4;
+	width: 100%;
+	height: 100%;
+	border: 1px solid var(--light);
+	background-color: var(--dark);
+	object-fit: contain;
+}
+
+.gamescreen, #gamescreen {
+	grid-area: 2 / 2 / 5 / 4;
+	border: 1px solid var(--light);
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	background-color: var(--dark);
+}
+
+.gameportrait, #gameportrait {
+	grid-area: 2 / 6 / 4 / 7;
+	border: 1px solid var(--light);
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	background-color: var(--dark);
+
+}
+
+.pressure, #pressure {
+	grid-area: 4 / 5 / 5 / 7;
+	border: 1px solid var(--light);
+	width: 100%;
+	height: 100%;
+	background-color: var(--dark);
+}
+
+.suddendeath {
+	--light: orangered;
+}
+
+.screenplay img { height: 100% }
+
+#gamescreen.suddendeath img {
+	mix-blend-mode: multiply !important;
+}
+
+#gamescreen.suddendeath {
+	background-color: orangered;
+}
+
+
+/* inkrunner touchstone... */
+
+#chat .window-title {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+#chat .window-title::before {
+	content: url("../images/touchstone.png");
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    left: -2px;
+    top: 2px;
+}
+
+#chat {
+	padding: 0;
+	width: 320px; height:352px;
+    border: solid var(--light) 1px;
+    grid-area: 2 / 3 / 4 / 5;
+	justify-self: center;
+	display: flex;
+	flex-flow: column;
+	padding-bottom: 32px;
+	overflow: scroll;
+}
+
+#touchstone #chat {
+	border: 0;
+	border-bottom: solid var(--light) 1px;
+}
+
+#chat > :first-child { /* this is for scrollin from the bottom */
+    margin-top: auto !important;
+    padding-top: 8px;
+}
+
+#chat [data-ir-role="continue"] { display: none }
+
+
+#chat p {
+	margin: 0;
+	height: auto;
+}
+
+#chat .username {
+    display: block;
+    font-size: 0.7em;
+    font-weight: bold;
+    height: auto;
+    margin-block: 8px;
+    margin-inline: 8px;
+}
+
+#chat .message {
+    display: inline-block;
+    border: 1px solid var(--light);
+    border-radius: 0 12px 12px 12px;
+    padding: 8px;
+    color: var(--dark);
+    background: var(--light);
+    width: auto;
+    height: auto;
+    margin-bottom: 8px;
+    margin-inline: 8px;
+    --light: peachpuff;
+}
+
+#chat .flex-right{
+	display: flex;
+	flex-flow: row;
+	justify-content: flex-end;
+}
+
+#chat .reply {
+	display: inline-block;
+    border: 1px solid var(--light);
+    border-radius: 12px 12px 0 12px;
+    width: auto;
+    height: auto;
+    padding: 8px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    margin-inline: 8px;
+}
+
+#chat a {
+	color: blue;
+}
+
+#chat a:hover {
+	color: var(--light);
+	background-color: var(--dark);
+}
+
+
+/* anims */
+
+@keyframes fadein {
+	from { opacity: 0 }
+	to { opacity: 1 }
+}
+
+@keyframes fadeout {
+	from { opacity: 1 }
+	to { opacity: 0 }
+}
+
+@keyframes flash {
+	from { background-color: white; color: white}
+	to { background-color: var(--dark); }
+}
+
+@keyframes sexyflash {
+	from { background-color: var(--dark)}
+	to { background-color: #b30c4d; }
+}
+
+@keyframes pulse {
+	from {opacity: 1;}
+	to {opacity: 0.3;}
+}
+
+@keyframes blink {
+	from {opacity: 1;}
+	to {opacity: 0.1;}
+}
+
+.animFlash {
+	animation: flash 0.5s ease alternate;
+}
+
+.animFadeIn {
+	animation: fadein 1s ease forwards;
+}
+
+.animFadeOut {
+	animation: fadeout 1s ease forwards;
+}
+
+.sexFlash {
+	animation: sexyflash 0.5s ease forwards;
+}
+
+
+/* chapter marker aaaaaaAHHHHHH */
+
+#chapterMarker {
+	z-index: 2;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	left: 0;
+	bottom: 0;
+	height: 100%;
+	width: 32px;
+	opacity: 1;
+}
+
+#chapterMarker img {
+	background-color: var(--dark);
+	height: 100%;
+}
+
+/*#chapterMarker:hover { opacity: 1; background-color: var(--dark); transition: all 0.5s linear }*/

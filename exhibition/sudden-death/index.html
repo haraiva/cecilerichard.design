@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<title>SUDDEN DEATH</title>
+		<link rel="shortcut icon" href="#" />
+		<link rel="stylesheet" href="./css/inkrunner.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<script type="module" src="./js/inkloader.js"></script>
+		<script type="module" src="./project.js"></script>
+		<link rel="stylesheet" href="./css/jupiterengine.css" />
+		<script src="./js/jupiterengine/engine.js"></script>
+		<script src="./js/jupiterengine/utility.js"></script>
+		<script src="./js/jupiterengine/howler.core.min.js"></script>
+
+		<script src="./js/timeoutreset.js"></script>
+		<script></script>
+		<script>
+			let inkrunner;
+			addEventListener("StoryActive", (event) => (inkrunner = event.detail.inkrunner));
+		</script>
+		<style>
+			.hiddenCommand { display:none; }
+
+			#quotecard img, #quotecard [data-ir-role="choicebox"] {
+			  margin-inline: auto;
+			  margin-block: 12px;
+			}
+
+			#welcomeScreen { width: calc(540px + 24px) !important; height: auto !important; }
+
+			#continue { 
+				height: auto; width: auto;
+				bottom: 0px !important;
+				top: auto !important;
+				left: auto !important;
+				right: 0 !important; 
+				} 
+
+  			#continue .window-title { display: none; }
+
+  			#continue .window-body {scrollbar-width: none;}
+
+  			#continue a { padding:1em; display: block; }
+ 		</style>
+	</head>
+	<body id="canvas">
+		<div id="chapterMarker"></div>
+		<div id="screen"></div>
+		<template id="audio-data">
+			<audio id="audio/clips/click" src="audio/click.mp3"></audio>
+			<audio id="audio/clips/move" src="audio/buzz-grain.mp3"></audio>
+			<audio id="audio/clips/notification" src="audio/notification.mp3"></audio>
+		</template>
+		<template id="window-data">
+			<!-- windows go here -->
+
+			<!-- exhibition build -->
+			<div id="welcomeScreen" title="Welcome" class="article" data-pinned>
+
+				<p>Before we begin:</p>
+					<ul>
+						<li><b>SUDDEN DEATH</b> was made on the unceded lands of the Wurundjeri Woi-wurrung people of Kulin Nations.</li>
+						<li>You <i>should</i> be wearing headphones when playing this game.</li>
+						<li>You <i>don't</i> need prior knowledge of Aussie Rules football to understand what's going on.</li>
+					</ul>
+					<p>Enjoy!</p>
+
+				<hr>
+				
+				<h2>[BEGIN|toDemo]</h2>
+			</div> 
+
+			<div id="toDemo" class="hiddenCommand"></div>
+
+			<!-- part 1 -->
+
+			<div id="article1" title="InsideAthletes.com - Pikers show no signs of slowing down" class="article" data-pinned>
+				<h1>PIKERS SHOW NO SIGNS OF SLOWING DOWN</h1>
+				<div class="date">26 August 2046</div>
+				<img src="./images/playersonfield.png">
+
+				<p>Saturday marked a new record for the East Glenvale Pikers, with their decisive 93-30 result over the Cobar Scorpions marking the latest victory in their 11-game win streak - a new record for the club.</p>
+
+				<p>With this win, the Pikers have secured their spot in the Qualifying Final against the Bundanyabba Hounds next Saturday.</p>
+
+				<p>Watching the skill, synergy and strength of the team, it’s hard to believe that a scant few years ago, the Pikers were languishing in the dregs of Division Three, with the looming threat of bankrupcy.</p>
+
+				<p>Pikers skipper Mitch Carraway reflected on East Glenvale's journey in the post-game press conference.</p>
+
+				<blockquote>“It’s all about the details, you know. Two years ago our team reached a point of no-return and we had to pick ourselves up. Our synergy as a team is immaculate now, we're seeing these results because we've been building upon years of grit and hard work.”</blockquote>
+
+				<p>Excellent stuff. The playoffs are sure to be a historical event as the Pikers are proving themselves a force to be reckoned with for any team that wants a chance at promotion.</p>
+
+				<hr>
+				
+				<h2>[Read Comments|comments1]</h2>
+			</div>
+
+			<div id="toPregame" class="hiddenCommand"></div>
+
+			<div id="comments1" title="InsideAthletes.com - Comments" class="comments">
+				<h1>COMMENTS</h1>
+				<div class="comment">
+					<div class="username">PikersFan3472</div>
+					<div class="body">LET’S GO PIKERS!!!!!!!!!</div>
+					<div class="votes"><span class="upvote">723</span> ・ <span class="downvote">32</span></div>
+				</div>
+
+				<div class="comment">
+					<div class="username">bloodypiker</div>
+					<div class="body">I really feel it this time… We’re going up. This is our year</div>
+					<div class="votes"><span class="upvote">514</span> ・ <span class="downvote">25</span></div>
+				</div>
+
+				<div class="comment">
+					<div class="username">CobarGemini</div>
+					<div class="body">Great play from both sides. Disappointed by the result but the Pikers are a stellar club.</div>
+					<div class="votes"><span class="upvote">73</span> ・ <span class="downvote">2</span></div>
+				</div>
+
+				<div class="comment">
+					<div class="username">ballfondIer69</div>
+					<div class="body">God Mitch is such a dreamboat</div>
+					<div class="votes"><span class="upvote">49</span> ・ <span class="downvote">15</span></div>
+						<div class="comment">
+							<div class="username">ballfondIer69</div>
+							<div class="body">The things I would do to him</div>
+							<div class="votes"><span class="upvote">10</span> ・ <span class="downvote">5</span></div>
+						</div>
+						<div class="comment">
+							<div class="username">ballfondIer69</div>
+							<div class="body"><i>Comment deleted by moderator</i></div>
+						</div>
+				</div>
+
+				<div class="comment">
+					<div class="username">ToxicScorpion</div>
+					<div class="body">This game was such bull****. Pikers got let off for so many fouls, were the umps even watching the ****ing game</div>
+					<div class="votes"><span class="upvote">15</span> ・ <span class="downvote">322</span></div>
+						<div class="comment">
+							<div class="username">NorthernPike</div>
+							<div class="body">shut the **** up you speccy cunt</div>
+							<div class="votes"><span class="upvote">44</span> ・ <span class="downvote">27</span></div>
+						</div>
+				</div>
+
+				<div class="comment">
+					<div class="username">MaxDawson1963</div>
+					<div class="body">[RIP BENNY BARASSI YOU FUCKING LEGEND|toPregame]</div>
+					<div class="votes"><span class="upvote">5</span> ・ <span class="downvote">0</span></div>
+				</div>
+			</div>
+
+			<div id="continue" title="continue button if you're lost" data-pinned>
+				[CONTINUE >>|toPregame]
+			</div>
+
+
+			<!-- part 2 -->
+
+			<div id="article2" title="InsideAthletes.com - BREAKING: Hatfield Rhinos caught using illicit PEDs" class="article" data-pinned>
+				<h1>BREAKING: HATFIELD RHINOS CAUGHT USING ILLICIT PEDS</h1>
+				<div class="date">30 August 2046</div>
+				<img src="./images/juice.png">
+
+				<p>Division 3 team the Hatfield Rhinos have been embroiled in controversy today after a whistleblower revealed a doping scandal. In the leak, they detailed how multiple top players at the club have been using DIY performance enhancing drugs, outside the legal substances listed on the PEC.</p>
+
+				<p>A statement from the UFL reads:</p>
+
+				<blockquote>“We are investigating this matter with utmost importance. The mission statement of the Unlimited Football League is to provide equality for all players, regardless of background, age or creed.
+				<br><br>
+				By utilising dangerous drugs outside of the regulation enhancements provided by the UFL Performance Enhancement Committee, this incident has jeopardised both the safety of the players as well as the integrity of the sport. Disciplinary measures will be pursued pending a full and thorough investigation of all parties suspected of involvement in this abhorrent act.”</blockquote>
+				
+				<p>Inside Athletes FIRMLY STANDS AGAINST any players or clubs that use illicit PEDs. We hope that the UFL keeps their word and severely penalises anyone involved in the creation, distribution, and usage of these harmful substances, spitting in the face of all that the PEC has done to promote fairness and equity in all aspects of the sport.</p>
+
+				<p>More on this story as it develops.</p>
+
+				<hr>
+				
+				<h2>[Read Comments|comments2]</h2>
+			</div> 
+
+			<div id="comments2" title="InsideAthletes.com - Comments" class="comments">
+				<h1>COMMENTS</h1>
+				<div class="comment">
+					<div class="username">ChargingRhino</div>
+					<div class="body">Heartbroken. Been following this club for 40 years and this is how they treat their loyal fans? Unbelievable.</div>
+					<div class="votes"><span class="upvote">734</span> ・ <span class="downvote">27</span></div>
+				</div>
+
+				<div class="comment">
+					<div class="username">MadHatter234</div>
+					<div class="body">Been a fan since I was a kid but no longer. Hanging up my jumper.</div>
+					<div class="votes"><span class="upvote">563</span> ・ <span class="downvote">24</span></div>
+						<div class="comment">
+							<div class="username">PIKERSTILLIDIE</div>
+							<div class="body">RESPECT. NO FAN OF ANY CLUB SHOULD HAVE TO GO THROUGH THIS</div>
+							<div class="votes"><span class="upvote">123</span> ・ <span class="downvote">6</span></div>
+								<div class="comment">
+									<div class="username">banehound</div>
+									<div class="body">from a pikers fan, lol…</div>
+									<div class="votes"><span class="upvote">2</span> ・ <span class="downvote">1</span></div>
+								</div>
+						</div>
+				</div>
+
+				<div class="comment">
+					<div class="username">ToxicScorpion</div>
+					<div class="body">I bet the Pikers are in on it. 57 years of being total shithouse and then they suddenly become a top club halfway through the season? Give me a fucking break.</div>
+					<div class="votes"><span class="upvote">323</span> ・ <span class="downvote">325</span></div>
+						<div class="comment">
+							<div class="username">SaintsFan4223</div>
+							<div class="body">Have you seen Lachlan Fields lately? He’s definitely on the juice</div>
+							<div class="votes"><span class="upvote">145</span> ・ <span class="downvote">146</span></div>
+								<div class="comment">
+									<div class="username">SaintsFan4223</div>
+									<div class="body">Bazza too</div>
+									<div class="votes"><span class="upvote">96</span> ・ <span class="downvote">93</span></div>
+								</div>
+								<div class="comment">
+									<div class="username">ballfondIer69</div>
+									<div class="body">just because hes naturally big and toned and muscular and sexy doesn’t mean hes juiced up… sounds like someone’s insecure</div>
+									<div class="votes"><span class="upvote">14</span> ・ <span class="downvote">14</span></div>
+								</div>
+						</div>
+						<div class="comment">
+							<div class="username">PIKERSTILLIDIE</div>
+							<div class="body">NO WAY, YOURE JUST MAD THAT YOU LOST</div>
+							<div class="votes"><span class="upvote">47</span> ・ <span class="downvote">34</span></div>
+						</div>
+				</div>
+
+				<div class="comment">
+					<div class="username">MaxDawson1963</div>
+					<div class="body">RIP BENNY BARASSI YOU FUCKING LEGEND</div>
+					<div class="votes"><span class="upvote">3</span> ・ <span class="downvote">0</span></div>
+				</div>
+
+				<div class="comment">
+					<div class="username">RiotPiker</div>
+					<div class="body">Not a Rhinos fan but i don’t really see what the big deal is? if you look into the report the stuff they’re using isn’t much different from what the PEC sells, it’s just cheaper</div>
+					<div class="votes"><span class="upvote">16</span> ・ <span class="downvote">562</span></div>
+						<div class="comment">
+							<div class="username">ToxicScorpion</div>
+							<div class="body">**** YOU YOU DOG</div>
+							<div class="votes"><span class="upvote">326</span> ・ <span class="downvote">34</span></div>
+						</div>
+						<div class="comment">
+							<div class="username">RhinosFan3342</div>
+							<div class="body">As a Rhinos fan, Please stay out of this. There’s no need to defend the club.</div>
+							<div class="votes"><span class="upvote">215</span> ・ <span class="downvote">5</span></div>
+						</div>
+						<div class="comment">
+							<div class="username">banehound</div>
+							<div class="body">DO YOU EVEN KNOW ANYTHING ABOUT UFL, YOU ****ING GRUB????</div>
+							<div class="votes"><span class="upvote">152</span> ・ <span class="downvote">13</span></div>
+						</div>
+						<div class="comment">
+							<div class="username">TurtlesFan117</div>
+							<div class="body">Guys, stop engaging. It’s clearly just a troll, arguing in bad faith.</div>
+							<div class="votes"><span class="upvote">114</span> ・ <span class="downvote">3</span></div>
+						</div>
+						<div class="comment">
+							<div class="username">AaronCampbell1994</div>
+							<div class="body">OF COURSE A PIKERS FAN WOULD SAY THIS. [THEYRE IN ON IT TOO|toAllure]</div>
+							<div class="votes"><span class="upvote">55</span> ・ <span class="downvote">57</span></div>
+						</div>
+				</div>
+			</div>
+
+			<div id="toAllure"></div>
+
+			<!-- part 3 -->
+
+			<div id="article3" title="InsideAthletes.com - Heroic Hounds Claw To Victory In Nail-biting Game Against Pikers" class="article" data-pinned>
+				<h1>HEROIC HOUNDS CLAW TO VICTORY IN NAIL-BITING GAME AGAINST PIKERS</h1>
+				<div class="date">3 September 2046</div>
+				<img src="./images/losinglost.png">
+
+				<p>The Bundanyabba Hounds performed an unlikely comeback by tying against a seemingly dominant Pikers side in the final quarter and surviving a dramatic chapter of Sudden Death, earning them a spot in the Preliminary Final.</p>
+
+				<p>East Glenvale was brilliant until the winds turned halfway into the third quarter, when skipper Mitchell Carraway took a heavy hit from Hounds forward Chris Johnston, shocking teammates and fans alike as he was carried off the field.</p>
+
+				<p>The Yabba’s own Parker Paternoster commented on the Hounds’ comeback in the final quarter:</p>
+
+				<blockquote>‘We started off wondering how to improve our possession and pressure, and after testing a few things we got results by the final quarter. We just needed more time, so we made time.’</blockquote>
+
+				<p>Indeed, if it weren’t Paternoster’s game-tying after-siren behind, the Pikers would have been making preparations for the Prelims instead.</p>
+
+				<p>While the Hounds’ next opponent is yet to be confirmed, the Pikers will be playing against the Hatfield Rhinos next week for the Elimination Final.</p>
+
+				<hr>
+				
+				<h2>[Read Comments|comments3]</h2>
+			</div> 
+
+			<div id="comments3" title="InsideAthletes.com - Comments" class="comments">
+				<h1>COMMENTS</h1>
+
+				<div class="comment">
+					<div class="username">HOUNDSARMY147</div>
+					<div class="body">LETS FUCKING GOOOOOOOOOOOO!!!!!!!!!!</div>
+					<div class="votes"><span class="upvote">567</span> ・ <span class="downvote">54</span></div>
+				</div>
+
+				<div class="comment">
+					<div class="username">doggystyle</div>
+					<div class="body">i can really feel it…. we’re going up…..</div>
+					<div class="votes"><span class="upvote">324</span> ・ <span class="downvote">23</span></div>
+						<div class="comment">
+							<div class="username">PIKERSTILLIDIE</div>
+							<div class="body">DONT GET COCKY THIS WAS A LUCKY BREAK</div>
+							<div class="votes"><span class="upvote">15</span> ・ <span class="downvote">46</span></div>
+							<div class="comment">
+								<div class="username">doggystyle</div>
+								<div class="body">**** off you absolute ****wit</div>
+								<div class="votes"><span class="upvote">13</span> ・ <span class="downvote">20</span></div>
+							</div>
+						</div>
+				</div>
+
+				<div class="comment">
+					<div class="username">SteerPiker</div>
+					<div class="body">a real nailbiter… great play from both sides. we’re still in this!!!</div>
+					<div class="votes"><span class="upvote">103</span> ・ <span class="downvote">12</span></div>
+						<div class="comment">
+							<div class="username">banehound</div>
+							<div class="body">HAHAHA GET FUUUUUUUUUUCKED</div>
+							<div class="votes"><span class="upvote">13</span> ・ <span class="downvote">68</span></div>
+						</div>
+				</div>
+
+				<div class="comment">
+					<div class="username">bloodypiker</div>
+					<div class="body">Johnston is an absolute flog. I hope he gets suspended for the rest of the finals, that’ll teach him.</div>
+					<div class="votes"><span class="upvote">56</span> ・ <span class="downvote">87</span></div>
+						<div class="comment">
+							<div class="username">t0pd0g1</div>
+							<div class="body">how about leung that ratbag he should get banned from the league</div>
+							<div class="votes"><span class="upvote">93</span> ・ <span class="downvote">44</span></div>
+						</div>
+				</div>
+
+				<div class="comment">
+					<div class="username">MaxDawson1963</div>
+					<div class="body">RIP BENNY BARASSI YOU FUCKING LEGEND</div>
+					<div class="votes"><span class="upvote">7</span> ・ <span class="downvote">0</span></div>
+				</div>
+
+				<div class="comment">
+					<div class="username">wallaby90549</div>
+					<div class="body">one knock on the head and that dropkick Carraway’s out cold? This sport is so ****ing soft compared to rugby</div>
+					<div class="votes"><span class="upvote">2</span> ・ <span class="downvote">77</span></div>
+				</div>
+
+				<div class="comment">
+					<div class="username">LAUREN341334174</div>
+					<div class="body">Click here to see my P U S S Y ----> [tinyurl. com/4p2u9fur|toSign]</div>
+					<div class="votes"><span class="upvote">7</span> ・ <span class="downvote">0</span></div>
+				</div>
+			</div>
+
+			<div id="toSign"></div>
+
+			<!-- part 4 -->
+
+			<div id="article4" title="InsideAthletes.com - Pikers Coach Killed In Car Crash" class="article" data-pinned>
+				<h1>PIKERS COACH KILLED IN CAR CRASH</h1>
+				<div class="date">7 September 2046</div>
+
+				<p>Pikers legend Shivani Kowalczyk has died at the age of 43, following a devastating crash on Wednesday evening at Lightning Ridge Raceway.</p>
+
+				<p>She was taken into critical care at the Durham County Hospital, and died of her wounds this morning.</p>
+
+				<p>This news comes in the wake of the club reaching the Division 2 playoffs for the first time in 57 years.</p>
+
+				<p>‘Shivani was a true football legend.’ said Matthew Gambier, president of the East Glenvale Pikers in [a statement by the club early this morning|statement].</p>
+
+				<hr>
+				
+				<h2>[Read Comments|comments4]</h2>
+			</div> 
+
+			<div id="statement" title="Vale Shivani Kowalczyk" class="article">
+				<h1>VALE SHIVANI KOWALCZYK</h1>
+
+				<p>The East Glenvale Pikers Football Club is saddened at the sudden and tragic passing of ex-player and coach Shivani Kowalzcyk.</p>
+
+				<img src="./images/vale.png">
+
+				<p>‘We are saddened to hear the news of Shivani’s passing. She served the Club for eighteen years as a legendary player, and nine more as head coach.’ said Matthew Gambier, president of the East Glenvale Pikers Football Club.</p>
+
+				<p>Shivani was a true football legend. She poured her life into the game, brought innovation and energy into this club, and was the pride of the East Glenvale Pikers, loved by players and fans across all leagues.</p>
+
+				<p>We extend our deepest condolences and sympathies to [Shivani’s loved ones.|toMourning]’</p>
+			</div>
+
+			<div id="toMourning"></div>
+
+			<div id="comments4" title="InsideAthletes.com - Comments" class="comments">
+				<h1>COMMENTS</h1>
+
+				<div class="comment">
+					<div class="username">MaxDawson1963</div>
+					<div class="body">RIP SHIV KOWALCZYK YOU BLOODY LEGEND</div>
+					<div class="votes"><span class="upvote">1026</span> ・ <span class="downvote">0</span></div>
+				</div>
+				<div class="comment">
+					<div class="username">bloodypiker</div>
+					<div class="body">RIP SHIV KOWALCZYK YOU BLOODY LEGEND</div>
+					<div class="votes"><span class="upvote">923</span> ・ <span class="downvote">0</span></div>
+				</div>
+				<div class="comment">
+					<div class="username">ToxicScorpion</div>
+					<div class="body">RIP SHIV KOWALCZYK YOU BLOODY LEGEND</div>
+					<div class="votes"><span class="upvote">642</span> ・ <span class="downvote">0</span></div>
+				</div>
+				<div class="comment">
+					<div class="username">RiotPiker</div>
+					<div class="body">RIP SHIV KOWALCZYK YOU BLOODY LEGEND</div>
+					<div class="votes"><span class="upvote">576</span> ・ <span class="downvote">0</span></div>
+				</div>
+				<div class="comment">
+					<div class="username">CobarGemini</div>
+					<div class="body">RIP SHIV KOWALCZYK YOU BLOODY LEGEND</div>
+					<div class="votes"><span class="upvote">508</span> ・ <span class="downvote">0</span></div>
+				</div>
+				<div class="comment">
+					<div class="username">SaintsFan4223</div>
+					<div class="body">RIP SHIV KOWALCZYK YOU BLOODY LEGEND</div>
+					<div class="votes"><span class="upvote">322</span> ・ <span class="downvote">0</span></div>
+				</div>
+				<div class="comment">
+					<div class="username">ballfondIer69</div>
+					<div class="body">RIP SHIV KOWALCZYK YOU BLOODY LEGEND</div>
+					<div class="votes"><span class="upvote">298</span> ・ <span class="downvote">0</span></div>
+				</div>
+				<div class="comment">
+					<div class="username">t0pd0g1</div>
+					<div class="body">RIP SHIV KOWALCZYK YOU BLOODY LEGEND</div>
+					<div class="votes"><span class="upvote">177</span> ・ <span class="downvote">0</span></div>
+				</div>
+				<div class="comment">
+					<div class="username">SteerPiker</div>
+					<div class="body">RIP SHIV KOWALCZYK YOU BLOODY LEGEND</div>
+					<div class="votes"><span class="upvote">105</span> ・ <span class="downvote">0</span></div>
+				</div>
+				<div class="comment">
+					<div class="username">ShivanDragon</div>
+					<div class="body">RIP SHIV KOWALCZYK YOU BLOODY LEGEND</div>
+					<div class="votes"><span class="upvote">55</span> ・ <span class="downvote">0</span></div>
+				</div>
+			</div>
+
+			<!-- misc -->
+
+			<div id="touchstone" title="Touchstone" class="chatlog" data-pinned></div>
+
+			<div id="credits" title="CREDITS">
+				<h2>SUDDEN DEATH</h2>
+				<table>
+					<tbody>
+						<tr>
+							<td colspan="2" class="center">Domino Jam 7<br>"Bodies in Motion"<br>2024</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="center">A game by<br>Benny Barassi and Geelong Catgirl</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="center">With additional help from<br>Mother Goose</td>
+						</tr>
+						<tr>
+							<td>Written by</td>
+							<td>Benny Barassi<br>Geelong Catgirl</td>
+						</tr>
+						<tr>
+							<td>Art by</td>
+							<td>Benny Barassi</td>
+						</tr>
+						<tr>
+							<td>SFX by</td>
+							<td>Geelong Catgirl</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2">Engines</th>
+						</tr>
+						<tr>
+							<td><a href="https://dominoclub.itch.io/sssm-in-the-shadow-of-jupiter" target="_blank">Jupiter</a> by</td>
+							<td>candle</th>
+						</tr>
+						<tr>
+							<td><a href="https://isyourguy.itch.io/inkrunner-pe" target="_blank">Inkrunner</a> by</td>
+							<td>isyouguy</th>
+						</tr>
+						<tr>
+							<td colspan="2" style="text-align: center; padding-top: 24px">Thank you Mother Goose<br>for making 'jinxrunner',<br>a jupiter plug-in for inkrunner.</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="fullwidth">
+					<tbody>
+						<tr>
+							<th scope="row">Images</th>
+						</tr>
+						<tr>
+							<td><a href="https://www.flickr.com/photos/25781112@N05/3958644014" target="_blank">2009 AFL Grand Final - Tom Harley, Corey Enright, Andrew Mackie</a><br>by JamesDPhotography</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.flickr.com/photos/42121221@N07/18599030881" target="_blank">ITU Patron for Youth and ICTs Interview in ITU TV Studio</a><br>by ITU Pictures</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.flickr.com/photos/dannebrog/5125323738/" target="_blank"> tunnel vision </a><br>by dannebrog</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.flickr.com/photos/michaelspencer/6910794448/" target="_blank">Melbourne Cricket Ground (MCG)</a><br>by Michael_Spencer</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.flickr.com/photos/jbj/16066440878/" target="_blank">Away showers at the Emirates</a><br>by Jason Jones</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.flickr.com/photos/davem/7966838/" target="_blank">Chinatown</a><br>by Dave & Lorelle</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.flickr.com/photos/jamescridland/41982576824/" target="_blank">Inside ABC Radio Melbourne</a><br>by James Cridland</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.flickr.com/photos/mikecogh/53179078458/" target="_blank">Arden St Oval</a><br>by Michael Coghlan</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.flickr.com/photos/smjb/10899938706" target="_blank">Radio commentary boxes at the MCG.</a><br>by Simon Yeo</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.flickr.com/photos/rachels_photo_world/3454796719/" target="_blank">richmond vs melbourne rnd4</a><br>by Rachel Hofton</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.flickr.com/photos/nnil/3569921880/" target="_blank">P1010570</a><br>by ynnil</td>
+						</tr>
+						<tr>
+							<td><a href="https://commons.wikimedia.org/w/index.php?curid=115288073" target="_blank">The Eastern end of The Gabba at sunset during an AFL game.jpg</a><br>by Your Next Kid</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.flickr.com/photos/craiga/154695192/" target="_blank">MCG</a><br>by Craig Anderson</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.flickr.com/photos/krb_events/17526444423/" target="_blank">AFL Bond University Bullsharks </a><br>by Kerrie</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.flickr.com/photos/ppym1/201768679/" target="_blank">Tackle</a><br>by Prescott Pym</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.flickr.com/photos/thomasrdororg/1023492736/in/album-72157600271629698/" target="_blank">DSC_0117</a><br>by Tom Reynolds</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.flickr.com/photos/thomasrdororg/1023520252/in/album-72157600271629698/" target="_blank">DSC_0156</a><br>by Tom Reynolds</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.flickr.com/photos/thomasrdororg/515855706/in/album-72157600271629698/" target="_blank">DSC_0204</a><br>by Tom Reynolds</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.flickr.com/photos/thomasrdororg/515855886/in/album-72157600271629698/" target="_blank">DSC_0207</a><br>by Tom Reynolds</td>
+						</tr>
+
+						<tr>
+						<th scope="row">SFX</th>
+						</tr>
+						<tr>
+							<td><a href="https://freesound.org/people/purchasing102/sounds/521825/" target="_blank">SoccerBallKick.wav</a><br>by purchasing102</td>
+						</tr>
+						<tr>
+							<td><a href="https://freesound.org/people/Garuda1982/sounds/541657/" target="_blank">water sprayer sound effect</a><br>by Garuda1982</td>
+						</tr>
+						<tr>
+							<td><a href="https://freesound.org/people/RICHERlandTV/sounds/232358/" target="_blank">Heavy Impacts</a><br>by RICHERlandTV</td>
+						</tr>
+						<tr>
+							<td><a href="https://freesound.org/people/pfranzen/sounds/328013/" target="_blank">Irritating flourescent light hum</a><br>by pfranzen</td>
+						</tr>
+						<tr>
+							<td><a href="https://freesound.org/people/Soundscape_Leuphana/sounds/209656/" target="_blank">20131203_Closing Locker _ZoomH2nXY.wav</a><br>by Soundscape_Leuphana</td>
+						</tr>
+						<tr>
+							<td><a href="https://freesound.org/people/ikbenraar/sounds/234903/" target="_blank">soccer_audience.aif</a>by ikbenraar<br></td>
+						</tr>
+						<tr>
+							<td><a href="https://freesound.org/people/RandomRecord19/sounds/714833/" target="_blank">3 different whistles blown</a><br>by RandomRecord19</td>
+						</tr>
+						<tr>
+							<td><a href="https://freesound.org/people/Robinhood76/sounds/692545/" target="_blank">11628 end of match referee whistle.wav</a><br>by Robinhood76</td>
+						</tr>
+						<tr>
+							<td><a href="https://freesound.org/people/Pablo-F/sounds/90743/" target="_blank">referee-whistle.wav</a><br>by Pablo-F</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.youtube.com/watch?v=h1GAsXHS_7s" target="_blank">AFL Siren Sound Effect </a><br>by gavin reynolds</td>
+						</tr>
+						<tr>
+							<td><a href="https://freesound.org/people/Alan_Editor/sounds/582338/" target="_blank">AJR0350_suburban_backyard_close_and_distant_magpies_distant_traffic.flac</a><br>by Alan_Editor</td>
+						</tr>
+						<tr>
+							<td><a href="https://freesound.org/people/bone666138/sounds/198877/" target="_blank">Coin Flip</a><br>by bone666138</td>
+						</tr>
+						<tr>
+							<td><a href="https://freesound.org/people/AppleCorey/sounds/689191/" target="_blank">Footballers jogging past</a><br>by AppleCorey</td>
+						</tr>
+						<tr>
+							<td><a href="https://freesound.org/people/plantmonkey/sounds/377107/" target="_blank">Gulls on The isles of Scilly</a><br>by plantmonkey</td>
+						</tr>
+						<tr>
+							<td><a href="https://freesound.org/people/kangaroovindaloo/sounds/161643/" target="_blank">Settlings Cockatoos with Urban Background</a><br>by kangaroovindaloo</td>
+						</tr>
+						<tr>
+							<td><a href="https://freesound.org/people/klangfabrik/sounds/118226/" target="_blank">shower- with curtains and water running.aiff</a><br>by klangfabrik</td>
+						</tr>
+						<tr>
+							<td><a href="https://freesound.org/people/dnlburnett/sounds/360760/" target="_blank">Melbourne street with trams passing XY.WAV</a><br>by dnlburnett</td>
+						</tr>
+						<tr>
+							<td><a href="https://freesound.org/people/Dan_AudioFile/sounds/654085/" target="_blank">Football-match_Cheering_Large-crowd_Ambience .stereo.wav</a><br>by Dan_AudioFile</td>
+						</tr>
+						<tr>
+							<td><a href="https://freesound.org/people/Quistard/sounds/237684/" target="_blank">Football Crowd - Near miss ooh 2 - Southampton Vs Hull at Saint Mary's Stadium.wav</a><br>by Quistard</td>
+						</tr>
+						<tr>
+							<td><a href="https://freesound.org/people/avakas/sounds/263680/" target="_blank">Football stadium fans are not happy with the referee</a><br>by avakas</td>
+						</tr>
+
+						<tr>
+							<th scope="row">Music</th>
+						</tr>
+						<tr>
+							<td><a href="https://freemusicarchive.org/music/ROZKOL/machine-masochist/machine-masochist/" target="_blank">Machine Masochist</a><br>by ROZKOL</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.youtube.com/watch?v=YaEtIJTXi0I" target="_blank">Everything</a><br>by Mannequin Pussy</td>
+						</tr>
+						<tr>
+							<td><a href="https://freemusicarchive.org/music/Monplaisir/Loops_1260/Monplaisir_-_Loops_-_01_The_Shimmer/" target="_blank">The Shimmer</a><br>by Monplaisir</td>
+						</tr>
+						<tr>
+							<td><a href="https://freemusicarchive.org/music/ROZKOL/machine-masochist/swing-my-arms-like-i-know-karate-moves/" target="_blank">Swing My Arms Like I Know Karate Moves</a><br>by ROZKOL</td>
+						</tr>
+						<tr>
+							<td><a href="https://freemusicarchive.org/music/viscid/disconnected/hyper-1/" target="_blank">Hyper</a><br>by Viscid</td>
+						</tr>
+						<tr>
+							<td><a href="https://freemusicarchive.org/music/ROZKOL/rising-of-the-lights-instrumentals/allesthesia-instrumental/" target="_blank">Allesthesia (Instrumental)</a><br>by ROZKOL</td>
+						</tr>
+						<tr>
+							<td><a href="https://freemusicarchive.org/music/ROZKOL/rising-of-the-lights-instrumentals/weve-been-here-before-instrumental/" target="_blank">We've Been Here Before (Instrumental)</a><br>by ROZKOL</td>
+						</tr>
+						<tr>
+							<td><a href="https://freemusicarchive.org/music/Monplaisir/Loops_1260/Monplaisir_-_Loops_-_10_Staring_at_the_void_between_me_and_the_wall/" target="_blank">Staring at the void between me and the wall</a><br>by Monplaisir</td>
+						</tr>
+						<tr>
+							<td><a href="https://freemusicarchive.org/music/Metre/shimmer-1/shake/" target="_blank">Shake</a><br>by Metre</td>
+						</tr>
+						<tr>
+							<td><a href="https://fotocopiadora.bandcamp.com/track/hows-it-goin-lol" target="_blank">hows it goin lol</a><br>by fotocopiadora</td>
+						</tr>
+						<tr>
+							<td><a href="https://www.youtube.com/watch?v=VAbYoSNJLeQ" target="_blank">Comment te dire adieu</a><br>by Jimmy Somerville feat. June Miles-Kingston</td>
+						</tr>
+						<tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- character sheet -->
+			<div id="characters" title="CHARACTERS">
+				<p style="text-transform: uppercase;">The main characters of our story:</p>
+				[<img src="./images/mitch.png" title="Mitchell 'Mitch' Carraway">|mitch][<img src="./images/jordan.png" title="Jordan 'Jordy' Leung">|jordan][<img src="./images/saffy-smile.png" title="Sapphire ‘Saffy’ Steele">|saffy][<img src="./images/shiv.png" title="Shivani ‘Shiv’ Kowalcyk">|shiv][<img src="./images/lucky.png" title="'Lucky' Lachlan Fields">|lucky][<img src="./images/bazza.png" title="Kelley 'Bazza' Bartlett-Shields">|bazza]
+			</div>
+			<div id="mitch" title="Mitchell ‘Mitch’ Carraway" class="profile">
+				<img src="./images/bust-mitch.png">
+				<div class="stats">
+					<ul>
+						<li>Position: Midfielder</li>
+						<li>Height: 6'1"</li>
+						<li>Temperament: Melancholic</li>
+					</ul>
+					<p>
+						The captain of the Pikers. Pragmatic, but loyal. Hopelessly in love with Jordan.
+					</p>
+				</div>
+			</div>
+			<div id="jordan" title="Jordan ‘Jordy’ Leung" class="profile">
+				<img src="./images/bust-jordan.png">
+				<div class="stats">
+					<ul>
+						<li>Position: Forward</li>
+						<li>Height: 6'0"</li>
+						<li>Temperament: Choleric</li>
+					</ul>
+					<p>
+						Mitch's best friend. Cheeky and cunning. The good umpire's nightmare.
+					</p>
+				</div>
+			</div>
+			<div id="saffy" title="Sapphire ‘Saffy’ Steele" class="profile">
+				<img src="./images/bust-saffy.png">
+				<div class="stats">
+					<ul>
+						<li>Position: Winger</li>
+						<li>Height: 6'0"</li>
+						<li>Temperament: Phlegmatic</li>
+					</ul>
+					<p>
+						Appears aloof, but deeply cares about the team. Protective of Lucky. 
+					</p>
+				</div>
+			</div>
+			<div id="shiv" title="Shivani ‘Shiv’ Kowalcyk" class="profile">
+				<img src="./images/bust-shiv.png">
+				<div class="stats">
+					<ul>
+						<li>Position: Coach</li>
+						<li>Height: 5'10"</li>
+						<li>Temperament: Melancholic</li>
+					</ul>
+					<p>
+						A legendary player, now a highly respected coach. Likes driving V8s on her days off.
+					</p>
+				</div>
+			</div>
+			<div id="lucky" title="‘Lucky’ Lachlan Fields" class="profile">
+				<img src="./images/bust-lucky.png">
+				<div class="stats">
+					<ul>
+						<li>Position: Ruckman</li>
+						<li>Height: 6'3"</li>
+						<li>Temperament: Sanguine</li>
+					</ul>
+					<p>
+						He was born to play this game. Believes his unprecendented skill is pure football genius. (It's not. It's PEDs.)
+					</p>
+				</div>
+			</div>
+			<div id="bazza" title="Kelley ‘Bazza’ Bartlett-Shields" class="profile">
+				<img src="./images/bust-bazza.png">
+				<div class="stats">
+					<ul>
+						<li>Position: Back Pocket</li>
+						<li>Height: 5'11", claims he's 6'0</li>
+						<li>Temperament: Choleric</li>
+					</ul>
+					<p>
+						Everyone calls him 'Bazza', which he hates. Tries hard because he lacks pure talent.
+					</p>
+				</div>
+			</div>
+
+			<!-- content warnings -->
+
+			<div id="contentWarnings" title="/!\ CONTENT WARNINGS /!\">
+				<p style="text-transform: uppercase;">Hover over censored sections to reveal spoilers.</p>
+				<p style="text-transform: uppercase;">Injections / <span class="spoiler">Sex</span> / <span class="spoiler">Sudden Death</span> / Excessive Use of Sports Gibberish </p>
+			</div>
+
+		</template>
+		<template id="event-data">
+			<!-- events go here -->
+			<script id="events/start">
+				// this runs the reset script below after "lastwindow" closes
+				// you could put this basically anywhere, but it's fine to do here.
+				RUN_EVENT_AFTER_CLOSED("reset", ["lastwindow"]);
+			</script>
+
+			<script id="chat1/open">
+				await DELAY(10);
+				OPEN_WINDOW("touchstone");
+				PING_WINDOW("touchstone")
+				inkrunner.JumpToKnot("chat1");
+				inkrunner.Continue();
+			</script>
+
+			<script id="chat3/open">
+				await DELAY(5);
+				OPEN_WINDOW("touchstone");
+				PING_WINDOW("touchstone")
+				inkrunner.JumpToKnot("chat3");
+				inkrunner.Continue();
+			</script>
+
+			<script id="ink/toSign">
+				inkrunner.JumpToKnot("sign");
+				inkrunner.Continue();
+			</script>
+
+			<script id="ink/toAllure">
+				inkrunner.JumpToKnot("allure");
+				inkrunner.Continue();
+			</script>
+
+			<script id="ink/toMourning">
+				inkrunner.JumpToKnot("mourning");
+				inkrunner.Continue();
+			</script>
+
+			<script id="chat4/open">
+				await DELAY(5);
+				OPEN_WINDOW("touchstone");
+				PING_WINDOW("touchstone")
+				inkrunner.JumpToKnot("chat4");
+				inkrunner.Continue();
+			</script>
+
+			<script id="lookatCredits">
+				OPEN_WINDOW("credits");
+				RUN_EVENT_AFTER_CLOSED("backToMenu", ["credits"])
+			</script>
+			<script id="characterSheet">
+				OPEN_WINDOW("characters");
+				RUN_EVENT_AFTER_CLOSED("backToMenu", ["characters"])
+			</script>
+			<script id="contentWarnings">
+				OPEN_WINDOW("contentWarnings");
+				RUN_EVENT_AFTER_CLOSED("backToMenu", ["contentWarnings"])
+			</script>
+			<script id="backToMenu">
+				inkrunner.ResetStory();
+				inkrunner.JumpToKnot("menu");
+				inkrunner.Continue();
+			</script>
+
+			<script id="closeAll">
+				CLOSE_ALL_EXCEPT();
+			</script>
+
+			<script id="testwindow/open">
+				OPEN_WINDOW("testwindow");
+				RUN_EVENT_AFTER_CLOSED("testwindow/close", ["testwindow"]);
+			</script>
+			<script id="testwindow/close">
+				// there's no "CLOSE_ALL" command, but calling this with no window works
+				CLOSE_ALL_EXCEPT();
+				// remember to call continue after changing knots
+				inkrunner.JumpToKnot("intro");
+				inkrunner.Continue();
+			</script>
+
+			<script id="reset">
+				// reset the ink story to the start again
+				// IMPORTANT: in the ink script i'm also running the #jReset tag
+				// but you could also just uncomment the below lines instead:
+				// FADE_MUSIC(0.1); // if you're not using jupiter for music, don't worry about it
+				// CLOSE_ALL_EXCEPT();
+				// opened.clear();
+				// closedWindows.clear();
+				inkrunner.ResetStory();
+				inkrunner.JumpToKnot("jtest1");
+				inkrunner.Continue();
+				// we run this event again so we retrigger this event
+				// when "lastwindow" closes, closing the loop
+				RUN_EVENT("events/start");
+			</script>
+			<!-- these events only trigger once and can't be reset because they're hiding in block level vars (i think) -->
+			<!-- i could edit engine.js but it's more fun to not -->
+			<!-- <event-trigger closed="lastwindow" event="reset"></event-trigger> -->
+			<event-trigger opened="comments1" event="continue/open"></event-trigger>
+			<event-trigger opened="touchstone3" event="chat3/open"></event-trigger> -->
+
+			<!-- hacky solution to jump to ink knot from a link... -->
+			<event-trigger opened="toSign" event="ink/toSign"></event-trigger>
+			<event-trigger opened="toMourning" event="ink/toMourning"></event-trigger>
+			<event-trigger opened="toAllure" event="ink/toAllure"></event-trigger>
+
+			<!-- exhibition stuff -->
+
+			<script id="welcomeScreen">
+				OPEN_WINDOW("welcomeScreen");
+			</script>
+
+			<script id="ink/toDemo">
+				inkrunner.JumpToKnot("origins");
+				inkrunner.Continue();
+			</script>
+
+			<event-trigger opened="toDemo" event="ink/toDemo"></event-trigger>
+
+			<!--<script id="continue/open">
+				await DELAY(10);
+				OPEN_WINDOW("continue")
+			</script>-->
+
+			<script id="ink/toPregame">
+				CLOSE_ALL_EXCEPT();
+				inkrunner.JumpToKnot("pregame");
+				inkrunner.Continue();
+			</script>
+
+			<event-trigger opened="toPregame" event="ink/toPregame"></event-trigger>
+		</template>
+	</body>
+</html>
